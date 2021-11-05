@@ -10,18 +10,14 @@ import SwiftUI
 
 struct ResultMapView: View {
   @State private var region = MKCoordinateRegion(
-    center: CLLocationCoordinate2D(
-      latitude: 25.7617,
-      longitude: 80.1918
-    ),
-    span: MKCoordinateSpan(
-      latitudeDelta: 10,
-      longitudeDelta: 10
-    )
+    center: CLLocationCoordinate2D(latitude: 37.334_900, longitude: -122.009_020),
+    latitudinalMeters: 750,
+    longitudinalMeters: 750
   )
 
   var body: some View {
     Map(coordinateRegion: $region)
+      .ignoresSafeArea()
   }
 }
 
