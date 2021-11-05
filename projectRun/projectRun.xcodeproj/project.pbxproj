@@ -11,6 +11,7 @@
 		EE7109ED2735C5BD0042ED4F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7109EC2735C5BD0042ED4F /* Workout.swift */; };
 		EE7109EF2735C5D00042ED4F /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7109EE2735C5D00042ED4F /* Serie.swift */; };
 		EE7109F12735CDC50042ED4F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7109F02735CDC50042ED4F /* ResultView.swift */; };
+		EE7109F32735D7240042ED4F /* ResultMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7109F22735D7240042ED4F /* ResultMapView.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		EE7109EC2735C5BD0042ED4F /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		EE7109EE2735C5D00042ED4F /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		EE7109F02735CDC50042ED4F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		EE7109F22735D7240042ED4F /* ResultMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultMapView.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,15 @@
 				EE7109EE2735C5D00042ED4F /* Serie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EE7109F42735D7280042ED4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE7109F02735CDC50042ED4F /* ResultView.swift */,
+				EE7109F22735D7240042ED4F /* ResultMapView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EE8F1D10273594DD00C3308E = {
@@ -212,7 +223,7 @@
 		EE8F1D52273597D300C3308E /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				EE7109F02735CDC50042ED4F /* ResultView.swift */,
+				EE7109F42735D7280042ED4F /* Views */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -350,6 +361,7 @@
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
 				EE7109ED2735C5BD0042ED4F /* Workout.swift in Sources */,
 				EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */,
+				EE7109F32735D7240042ED4F /* ResultMapView.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
 				EE7109F12735CDC50042ED4F /* ResultView.swift in Sources */,
