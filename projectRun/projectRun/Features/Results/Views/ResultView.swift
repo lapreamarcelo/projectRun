@@ -9,11 +9,20 @@ import SwiftUI
 
 struct ResultView: View {
   var body: some View {
-    VStack(alignment: .leading) {
-      Text("Yesterday at 15:00")
-      Text("5.23 Kms")
-        .font(.largeTitle)
+    VStack(alignment: .leading, spacing: 20) {
+      HStack {
+        Image(systemName: "figure.walk.circle")
+          .font(.largeTitle)
 
+        VStack(alignment: .leading) {
+          Text("Yesterday at 15:00")
+            .font(.body)
+            .foregroundColor(.secondary)
+          Text("5.23 Kms")
+            .font(.largeTitle)
+            .foregroundColor(.primary)
+        }
+      }
       HStack {
         VStack(spacing: 20) {
           VStack {
@@ -43,11 +52,22 @@ struct ResultView: View {
         }
         Spacer()
       }
-      .padding(.vertical)
+      .padding()
+      .overlay(
+        RoundedRectangle(cornerRadius: 20)
+          .stroke(.gray.opacity(0.3), lineWidth: 1)
+          .shadow(color: .gray, radius: 2, x: 1, y: 1)
+      )
 
       ChartView(workout: Workout.dummyWorkout())
-        .frame(height: 200, alignment: .center)
         .background(LinearGradient(gradient: backgroundGradient, startPoint: .top, endPoint: .bottom))
+        .cornerRadius(20)
+        .overlay(
+          RoundedRectangle(cornerRadius: 20)
+            .stroke(.gray.opacity(0.3), lineWidth: 1)
+            .shadow(color: .gray, radius: 2, x: 1, y: 1)
+        )
+      Spacer()
     }
     .padding(.horizontal, 10)
   }
@@ -60,6 +80,8 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
   static var previews: some View {
-    ResultView()
+    NavigationView {
+      ResultView()
+    }
   }
 }
