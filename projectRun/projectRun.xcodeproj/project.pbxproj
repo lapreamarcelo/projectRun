@@ -98,6 +98,9 @@
 		EE8F1D1B273594DD00C3308E /* projectRun */ = {
 			isa = PBXGroup;
 			children = (
+				EE8F1D4F2735955900C3308E /* Core */,
+				EE8F1D502735956000C3308E /* Features */,
+				EE8F1D4E2735954D00C3308E /* Repositories */,
 				EE8F1D1C273594DD00C3308E /* projectRunApp.swift */,
 				EE8F1D1E273594DD00C3308E /* ContentView.swift */,
 				EE8F1D20273594DF00C3308E /* Assets.xcassets */,
@@ -131,6 +134,59 @@
 				EE8F1D3E273594DF00C3308E /* projectRunUITestsLaunchTests.swift */,
 			);
 			path = projectRunUITests;
+			sourceTree = "<group>";
+		};
+		EE8F1D4B2735953100C3308E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE8F1D4C2735953800C3308E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8F1D4D2735954100C3308E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8F1D4E2735954D00C3308E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EE8F1D4F2735955900C3308E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EE8F1D502735956000C3308E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F1D512735958F00C3308E /* Workouts */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EE8F1D512735958F00C3308E /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F1D4D2735954100C3308E /* ViewModels */,
+				EE8F1D4C2735953800C3308E /* Models */,
+				EE8F1D4B2735953100C3308E /* Views */,
+			);
+			path = Workouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
