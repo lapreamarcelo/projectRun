@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A7DCAA52735CF100058F92F /* CountDownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DCAA42735CF100058F92F /* CountDownViewModel.swift */; };
+		0A7DCAA72735D05A0058F92F /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DCAA62735D0590058F92F /* CountdownView.swift */; };
+		0A7DCAAB2735D9600058F92F /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DCAAA2735D9600058F92F /* Countdown.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A7DCAA42735CF100058F92F /* CountDownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewModel.swift; sourceTree = "<group>"; };
+		0A7DCAA62735D0590058F92F /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		0A7DCAAA2735D9600058F92F /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7DCAA02735CE470058F92F /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DCAA22735CE6B0058F92F /* Models */,
+				0A7DCAA32735CE720058F92F /* Views */,
+				0A7DCAA12735CE610058F92F /* ViewModels */,
+			);
+			path = CountDown;
+			sourceTree = "<group>";
+		};
+		0A7DCAA12735CE610058F92F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DCAA42735CF100058F92F /* CountDownViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0A7DCAA22735CE6B0058F92F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DCAAA2735D9600058F92F /* Countdown.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A7DCAA32735CE720058F92F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DCAA62735D0590058F92F /* CountdownView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EE8F1D10273594DD00C3308E = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +214,7 @@
 		EE8F1D502735956000C3308E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0A7DCAA02735CE470058F92F /* CountDown */,
 				EE8F1D512735958F00C3308E /* Workouts */,
 			);
 			path = Features;
@@ -321,6 +362,9 @@
 			files = (
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
 				EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */,
+				0A7DCAA72735D05A0058F92F /* CountdownView.swift in Sources */,
+				0A7DCAAB2735D9600058F92F /* Countdown.swift in Sources */,
+				0A7DCAA52735CF100058F92F /* CountDownViewModel.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
 			);
