@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
+    var healtKitManager = HealthKitManager()
+    
+    var health = HealthKitManagerWatch()
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        MetricsView()
+            .onAppear {
+                healtKitManager.authorizeHealthKit { success, error in
+                    print(error)
+                    print(success)
+                }
+            }
     }
 }
 
