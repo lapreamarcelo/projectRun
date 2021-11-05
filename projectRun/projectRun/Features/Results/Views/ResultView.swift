@@ -29,12 +29,14 @@ struct ResultView: View {
             Label("Avg. Heart Rate", systemImage: "heart")
               .foregroundColor(.secondary)
             Text("145")
+              .foregroundColor(.primary)
           }
 
           VStack {
             Label("Avg. Pace", systemImage: "figure.walk")
               .foregroundColor(.secondary)
             Text("145")
+              .foregroundColor(.primary)
           }
         }
         Spacer()
@@ -43,31 +45,27 @@ struct ResultView: View {
             Label("Calories", systemImage: "flame")
               .foregroundColor(.secondary)
             Text("145")
+              .foregroundColor(.primary)
           }
           VStack {
             Label("Time", systemImage: "clock")
               .foregroundColor(.secondary)
             Text("145")
+              .foregroundColor(.primary)
           }
         }
+        .font(.body)
         Spacer()
       }
       .padding()
-      .overlay(
-        RoundedRectangle(cornerRadius: 20)
-          .stroke(.gray.opacity(0.3), lineWidth: 1)
-          .shadow(color: .gray, radius: 2, x: 1, y: 1)
-      )
+      .roundCorners(radius: 20)
 
       ChartView(workout: Workout.dummyWorkout())
         .background(LinearGradient(gradient: backgroundGradient, startPoint: .top, endPoint: .bottom))
-        .cornerRadius(20)
-        .overlay(
-          RoundedRectangle(cornerRadius: 20)
-            .stroke(.gray.opacity(0.3), lineWidth: 1)
-            .shadow(color: .gray, radius: 2, x: 1, y: 1)
-        )
-      Spacer()
+        .roundCorners(radius: 20)
+
+      ResultMapView()
+        .roundCorners(radius: 20)
     }
     .padding(.horizontal, 10)
   }
