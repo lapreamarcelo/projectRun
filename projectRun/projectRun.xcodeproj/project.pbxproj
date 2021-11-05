@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		256A405627359A4E00ED3616 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A405527359A4E00ED3616 /* WorkoutView.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		256A405527359A4E00ED3616 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		256A40572735BDDE00ED3616 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EE8F1D10273594DD00C3308E = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +148,7 @@
 		EE8F1D4B2735953100C3308E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				256A405527359A4E00ED3616 /* WorkoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +177,7 @@
 		EE8F1D4F2735955900C3308E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				256A40572735BDDE00ED3616 /* Components */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -320,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
+				256A405627359A4E00ED3616 /* WorkoutView.swift in Sources */,
 				EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
