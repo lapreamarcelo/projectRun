@@ -16,6 +16,28 @@ class WorkoutManager: NSObject, ObservableObject {
     
     override init() {}
     
+    func authorizeHealthKit() {
+        guard HKHealthStore.isHealthDataAvailable() else {
+            return
+        }
+        
+        guard
+            let heartRate = HKObjectType.quantityType(forIdentifier: .heartRate),
+            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
+            let runningDistance = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)
+        else {
+            return
+        }
+        
+        let typesToShare: Set = [HKQuantityType.workoutType()]
+        let typesToRead: Set = [heartRate, activeEnergy, runningDistance, HKObjectType.activitySummaryType()]
+
+        HKHealthStore().requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
+            
+        }
+    }
+
+    
     func startWorkout() {
         let workoutType: HKWorkoutActivityType = .running
         let configuration = HKWorkoutConfiguration()
@@ -67,6 +89,7 @@ class WorkoutManager: NSObject, ObservableObject {
     @Published var heartRate: Double = 0
     @Published var activeEnergy: Double = 0
     @Published var distance: Double = 0
+    @Published var workout: HKWorkout?
     
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else {
@@ -93,6 +116,16 @@ class WorkoutManager: NSObject, ObservableObject {
             }
         }
     }
+    
+    func resetWorkout() {
+        builder = nil
+        session = nil
+        workout = nil
+        activeEnergy = 0
+        averageHeartRate = 0
+        heartRate = 0
+        distance = 0
+    }
 }
 
 extension WorkoutManager: HKWorkoutSessionDelegate {
@@ -108,7 +141,7 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
         if toState == .ended {
             builder?.endCollection(withEnd: date, completion: { success, error in
                 self.builder?.finishWorkout(completion: { workout, error in
-                    print("END WORKOUT")
+                    self.workout = workout
                 })
             })
         }

@@ -9,16 +9,12 @@ import SwiftUI
 import HealthKit
 
 struct ContentView: View {
-    var healtKitManager = HealthKitManager()
+    @ObservedObject var workoutManager = WorkoutManager()
     
-    var health = HealthKitManagerWatch()
     var body: some View {
-        MetricsView()
+        MetricsView(workoutManager: workoutManager)
             .onAppear {
-                healtKitManager.authorizeHealthKit { success, error in
-                    print(error)
-                    print(success)
-                }
+                workoutManager.authorizeHealthKit()
             }
     }
 }

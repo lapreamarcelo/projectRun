@@ -40,13 +40,6 @@ struct ContentView: View {
             }
             Text("Select an item")
         }
-        .onAppear {
-            HealthKitManager().authorizeHealthKit { success, error in
-                if success {
-                    print("success")
-                }
-            }
-        }
     }
 
     private func addItem() {

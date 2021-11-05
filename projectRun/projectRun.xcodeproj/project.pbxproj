@@ -18,14 +18,12 @@
 		632F87432735C768008F2A5F /* projectRunWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 632F87232735C766008F2A5F /* projectRunWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F874C2735C7DA008F2A5F /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		632F874D2735C7E8008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
-		632F87502735C96A008F2A5F /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F874F2735C96A008F2A5F /* HealthKitManager.swift */; };
 		632F87552735C9A6008F2A5F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632F87542735C9A6008F2A5F /* HealthKit.framework */; };
 		632F87582735C9B1008F2A5F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632F87572735C9B1008F2A5F /* HealthKit.framework */; };
 		632F875A2735CD4B008F2A5F /* HealthKitManagerWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87592735CD4B008F2A5F /* HealthKitManagerWatch.swift */; };
 		632F875C2735D60A008F2A5F /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875B2735D60A008F2A5F /* MetricsView.swift */; };
 		632F875E2735D8CA008F2A5F /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */; };
 		632F87602735DC9F008F2A5F /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875F2735DC9F008F2A5F /* WorkoutManager.swift */; };
-		632F87622735E156008F2A5F /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F874F2735C96A008F2A5F /* HealthKitManager.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -105,7 +103,6 @@
 		632F873D2735C768008F2A5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		632F873F2735C768008F2A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632F87402735C768008F2A5F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		632F874F2735C96A008F2A5F /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		632F87522735C9A6008F2A5F /* projectRunWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "projectRunWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		632F87542735C9A6008F2A5F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		632F87562735C9B1008F2A5F /* projectRun.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = projectRun.entitlements; sourceTree = "<group>"; };
@@ -198,14 +195,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		632F874E2735C95C008F2A5F /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				632F874F2735C96A008F2A5F /* HealthKitManager.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		632F87532735C9A6008F2A5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +236,6 @@
 				EE8F1D4F2735955900C3308E /* Core */,
 				EE8F1D502735956000C3308E /* Features */,
 				EE8F1D4E2735954D00C3308E /* Repositories */,
-				632F874E2735C95C008F2A5F /* Utils */,
 				EE8F1D1C273594DD00C3308E /* projectRunApp.swift */,
 				EE8F1D1E273594DD00C3308E /* ContentView.swift */,
 				EE8F1D20273594DF00C3308E /* Assets.xcassets */,
@@ -536,7 +524,6 @@
 				632F87332735C767008F2A5F /* ContentView.swift in Sources */,
 				632F87392735C767008F2A5F /* ComplicationController.swift in Sources */,
 				632F874C2735C7DA008F2A5F /* projectRunApp.swift in Sources */,
-				632F87622735E156008F2A5F /* HealthKitManager.swift in Sources */,
 				632F87372735C767008F2A5F /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,7 +535,6 @@
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
 				EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
-				632F87502735C96A008F2A5F /* HealthKitManager.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
