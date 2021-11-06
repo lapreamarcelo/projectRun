@@ -12,7 +12,10 @@ struct ResultView: View {
     VStack(alignment: .leading, spacing: 20) {
       HStack {
         Image(systemName: "figure.walk.circle")
-          .font(.largeTitle)
+          .font(.system(size: 60))
+          .symbolVariant(.slash.fill)
+          .foregroundStyle(.teal, .white)
+          .symbolRenderingMode(.multicolor)
 
         VStack(alignment: .leading) {
           Text("Yesterday at 15:00")
