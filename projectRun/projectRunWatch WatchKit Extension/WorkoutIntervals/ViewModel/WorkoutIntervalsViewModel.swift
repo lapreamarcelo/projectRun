@@ -13,7 +13,7 @@ class WorkoutIntervalsViewModel: ObservableObject {
     @Published var workoutManager: WorkoutManager
     @Published var shouldStartRest: Bool = false
     @Published var pace: String = "00:00"
-    @Published var currentTime: TimeInterval = TimeInterval(0)
+    @Published var currentSeconds: Int = 0
     
     private var startedAt = Date()
     private var total: Double = 100
@@ -40,31 +40,20 @@ private extension WorkoutIntervalsViewModel {
         workoutManager
             .$running
             .sink { [weak self] isRunning in
+                #warning("NEED TO REACTIVATE THIS TIMER SOMEHOW")
                 if !isRunning {
                     self?.timer.connect().cancel()
                 }
             }
             .store(in: &subscriptions)
         
-        startTimer().sink { seconds in
-            self.currentTime = TimeInterval(seconds)
-        }
-        .store(in: &subscriptions)
-    }
-    
-    func startTimer() -> AnyPublisher<Int, Never> {
-        timer.autoconnect()
-            .map { [weak self] _ in
-                guard let self = self else { return 0 }
-
-                let calendar = Calendar(identifier: .gregorian)
-                let components = calendar
-                    .dateComponents([.second]
-                                    ,from: self.startedAt,
-                                    to: Date())
-
-                return components.second ?? 0
-        }.eraseToAnyPublisher()
+        timer
+            .autoconnect()
+               .sink { _ in
+                   print(self.currentSeconds)
+                   self.currentSeconds += 1
+               }
+               .store(in: &subscriptions)
     }
     
     func checkDistante(distance: Double) {
@@ -74,11 +63,11 @@ private extension WorkoutIntervalsViewModel {
     }
     
     func calculatePace(distance: Double) {
-        if currentTime == 0 {
+        if currentSeconds == 0 {
             return
         }
         
-        let currentPace = (1000 * currentTime) / distance
+        let currentPace = (1000 * Double(currentSeconds)) / distance
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.minute, .second]
         formatter.zeroFormattingBehavior = .pad
