@@ -13,7 +13,11 @@ struct RoundedCorners: ViewModifier {
   func body(content: Content) -> some View {
     content
       .cornerRadius(radius)
-      .shadow(color: .gray, radius: 2, x: 1, y: 1)
+      .overlay(
+        RoundedRectangle(cornerRadius: radius)
+          .stroke(.gray.opacity(0.3), lineWidth: 1)
+          
+      )
   }
 }
 

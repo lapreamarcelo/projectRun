@@ -11,7 +11,32 @@ import SwiftUI
 struct projectRunApp: App {
     var body: some Scene {
         WindowGroup {
-          WorkoutView()
+          #if os(watchOS)
+            WorkoutView()
+          #endif
+
+          #if os(iOS)
+            TabView {
+              WorkoutView()
+                .tabItem {
+                  Image(systemName: "bolt.horizontal")
+                  Text("Workouts")
+                }
+              WorkoutView()
+                .tabItem {
+                  Image(systemName: "figure.walk")
+                  Text("Start")
+                }
+              ActivityView()
+                .tabItem {
+                  Image(systemName: "square.fill.text.grid.1x2")
+                  Text("Activity")
+                }
+            }
+            .onAppear {
+              UITabBar.appearance().backgroundColor = .white
+            }
+          #endif
         }
     }
 }

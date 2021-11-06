@@ -123,7 +123,7 @@ struct IntervalItemView: View {
     }
     .frame(width: 175, height: 175, alignment: .leading)
     .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
-    .modifier(CardModifier())
+    .roundCorners(radius: 20)
     .padding(.all, 10)
   }
 }
