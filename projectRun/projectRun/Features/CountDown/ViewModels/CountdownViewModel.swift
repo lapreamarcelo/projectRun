@@ -9,7 +9,7 @@ import Foundation
 import Swift
 import Combine
 
-class CountDownViewModel: ObservableObject {
+class CountdownViewModel: ObservableObject {
     @Published var currentNumber: String
     @Published var running: Bool
 
@@ -32,7 +32,7 @@ class CountDownViewModel: ObservableObject {
             .sink { [weak self] currentNumber in
                 guard currentNumber > 0 else {
                     self?.timerSubscription?.cancel()
-                    self?.currentNumber = String("0")
+                    self?.currentNumber = String("RUN")
                     self?.running = false
                     return
                 }

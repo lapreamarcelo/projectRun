@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class Countdown {
-    private let seconds: Int
+    private var seconds: Int
     private let startedAt = Date()
     private var timer = Timer.publish(every: 1, on: .main, in: .default)
 
@@ -22,13 +22,11 @@ class Countdown {
             .map { [weak self] _ in
                 guard let self = self else { return 0 }
 
-                let calendar = Calendar(identifier: .gregorian)
-                let components = calendar
-                    .dateComponents([.second]
-                                    ,from: self.startedAt,
-                                    to: Date())
+                if self.seconds > 0 {
+                    self.seconds -= 1
+                }
 
-                return self.seconds - (components.second ?? 0)
+                return self.seconds
         }.eraseToAnyPublisher()
     }
 }
