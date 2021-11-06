@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Workout {
+struct Workout: Identifiable {
+  let id = UUID()
   let series: [Serie]
 
   var maxTime: Double {

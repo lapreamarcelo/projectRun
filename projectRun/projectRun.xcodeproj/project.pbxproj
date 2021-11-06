@@ -43,6 +43,10 @@
 		EE88541927361A9B008F4312 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541627361A9B008F4312 /* Workout.swift */; };
 		EE88541A27361A9B008F4312 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541727361A9B008F4312 /* Serie.swift */; };
 		EE88541B27361A9B008F4312 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541827361A9B008F4312 /* ChartView.swift */; };
+		EE88542327369A36008F4312 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88542227369A36008F4312 /* ActivityView.swift */; };
+		EE88542527369EFC008F4312 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88542427369EFC008F4312 /* StatsSummaryView.swift */; };
+		EE88542B2736AA45008F4312 /* ActivityHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88542A2736AA45008F4312 /* ActivityHeader.swift */; };
+		EE8854322736AFFD008F4312 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854312736AFFD008F4312 /* RunView.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -167,6 +171,10 @@
 		EE88541627361A9B008F4312 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		EE88541727361A9B008F4312 /* Serie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
 		EE88541827361A9B008F4312 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		EE88542227369A36008F4312 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		EE88542427369EFC008F4312 /* StatsSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSummaryView.swift; sourceTree = "<group>"; };
+		EE88542A2736AA45008F4312 /* ActivityHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHeader.swift; sourceTree = "<group>"; };
+		EE8854312736AFFD008F4312 /* RunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -347,6 +355,7 @@
 			children = (
 				EE88541127361A64008F4312 /* ResultView.swift */,
 				EE88541227361A64008F4312 /* ResultMapView.swift */,
+				EE88542427369EFC008F4312 /* StatsSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -358,6 +367,55 @@
 				EE88541727361A9B008F4312 /* Serie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EE88541E273699A5008F4312 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE88542127369A1D008F4312 /* ViewModels */,
+				EE88542027369A15008F4312 /* Models */,
+				EE88541F27369A0E008F4312 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EE88541F27369A0E008F4312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE88542227369A36008F4312 /* ActivityView.swift */,
+				EE88542A2736AA45008F4312 /* ActivityHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE88542027369A15008F4312 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE88542127369A1D008F4312 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE88542F2736AFE3008F4312 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				EE8854302736AFEE008F4312 /* Views */,
+			);
+			path = Run;
+			sourceTree = "<group>";
+		};
+		EE8854302736AFEE008F4312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE8854312736AFFD008F4312 /* RunView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EE8F1D10273594DD00C3308E = {
@@ -463,6 +521,8 @@
 		EE8F1D502735956000C3308E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EE88542F2736AFE3008F4312 /* Run */,
+				EE88541E273699A5008F4312 /* Home */,
 				EE88540F27361A64008F4312 /* Results */,
 				0AC4BB1F27360CB000024D5F /* CountDown */,
 				EE8F1D512735958F00C3308E /* Workouts */,
@@ -483,7 +543,6 @@
 		EE8F1D552735EB9900C3308E /* CustomModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				256CD50827361C4A00EA0E26 /* CardModifier.swift */,
 				EE8F1D562735EBAE00C3308E /* RoundedCorners.swift */,
 			);
 			path = CustomModifiers;
@@ -751,9 +810,12 @@
 				0AC4BB2627360CB000024D5F /* CountDownViewModel.swift in Sources */,
 				EE88541927361A9B008F4312 /* Workout.swift in Sources */,
 				0AC4BB2827360CB000024D5F /* CountdownView.swift in Sources */,
-				256CD50927361C4A00EA0E26 /* CardModifier.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
+				EE88542527369EFC008F4312 /* StatsSummaryView.swift in Sources */,
+				EE88542327369A36008F4312 /* ActivityView.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
+				EE88542B2736AA45008F4312 /* ActivityHeader.swift in Sources */,
+				EE8854322736AFFD008F4312 /* RunView.swift in Sources */,
 				0AC4BB2727360CB000024D5F /* Countdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
