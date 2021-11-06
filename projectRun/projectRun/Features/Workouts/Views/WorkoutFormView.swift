@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SeriesFormView: View {
+struct WorkoutFormView: View {
   @Environment(\.dismiss) var dismiss
 
   @State private var distance: String = ""
@@ -76,6 +76,6 @@ struct SeriesFormView: View {
 
 struct SeriesFormView_Previews: PreviewProvider {
   static var previews: some View {
-    SeriesFormView()
+    WorkoutFormView()
   }
 }

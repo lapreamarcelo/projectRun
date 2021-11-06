@@ -16,7 +16,7 @@ struct WorkoutsView: View {
       VStack {
         WorkoutCardView()
       }
-      .navigationBarTitle(Text("Workout"))
+      .navigationBarTitle(Text("Workouts"))
       .toolbar {
         ToolbarItem {
           Button {
@@ -27,7 +27,7 @@ struct WorkoutsView: View {
         }
       }
       .sheet(isPresented: $showingSheet) {
-        SeriesFormView()
+        WorkoutFormView()
       }
     }
   }
