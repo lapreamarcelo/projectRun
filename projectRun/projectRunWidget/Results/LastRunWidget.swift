@@ -25,7 +25,7 @@ struct LRProvider: TimelineProvider {
   }
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<LREntry>) -> Void) {
-    var entries: [LREntry] = []
+    let entries: [LREntry] = [LREntry(date: Date())]
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
   }
@@ -36,7 +36,7 @@ struct LastRunWidget: Widget {
 
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: LRProvider()) { entry in
-
+      StatsSummaryHeaderView()
     }
     .configurationDisplayName("Last Run Results")
     .description("View your last run results")

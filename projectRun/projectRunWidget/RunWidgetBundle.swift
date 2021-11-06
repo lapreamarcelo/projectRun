@@ -12,6 +12,8 @@ import WidgetKit
 struct RunWidgetBundle: WidgetBundle {
   @WidgetBundleBuilder
   var body: some Widget {
-    projectRunWidget()
+    StartWorkoutWidget()
+    LastRunWidget()
+    ResultsWidget()
   }
 }

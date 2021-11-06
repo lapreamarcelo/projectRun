@@ -23,6 +23,11 @@
 		25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFD2736ACF200407C65 /* LastRunWidget.swift */; };
 		25C06D002736B5F200407C65 /* StatsSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */; };
 		25C06D012736B6D700407C65 /* StatsSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */; };
+		25C06D032736C8E700407C65 /* ResultsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D022736C8E700407C65 /* ResultsWidget.swift */; };
+		25C06D042736CB2100407C65 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88542427369EFC008F4312 /* StatsSummaryView.swift */; };
+		25C06D082736D0B800407C65 /* StartWorkoutWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D072736D0B800407C65 /* StartWorkoutWidget.swift */; };
+		25C06D092736D22F00407C65 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutView.swift */; };
+		25C06D0A2736D25000407C65 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D562735EBAE00C3308E /* RoundedCorners.swift */; };
 		632F87262735C767008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F87252735C767008F2A5F /* Assets.xcassets */; };
 		632F872C2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87332735C767008F2A5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87322735C767008F2A5F /* ContentView.swift */; };
@@ -148,6 +153,8 @@
 		25C06CFA2736ABB200407C65 /* RunWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunWidgetBundle.swift; sourceTree = "<group>"; };
 		25C06CFD2736ACF200407C65 /* LastRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRunWidget.swift; sourceTree = "<group>"; };
 		25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSummaryHeaderView.swift; sourceTree = "<group>"; };
+		25C06D022736C8E700407C65 /* ResultsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsWidget.swift; sourceTree = "<group>"; };
+		25C06D072736D0B800407C65 /* StartWorkoutWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutWidget.swift; sourceTree = "<group>"; };
 		632F87232735C766008F2A5F /* projectRunWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRunWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F87252735C767008F2A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "projectRunWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +278,7 @@
 		25C06CED2736A2FD00407C65 /* projectRunWidget */ = {
 			isa = PBXGroup;
 			children = (
+				25C06D062736D03900407C65 /* Workouts */,
 				25C06CFC2736ACB400407C65 /* Results */,
 				25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */,
 				25C06CF02736A2FF00407C65 /* Assets.xcassets */,
@@ -284,8 +292,17 @@
 			isa = PBXGroup;
 			children = (
 				25C06CFD2736ACF200407C65 /* LastRunWidget.swift */,
+				25C06D022736C8E700407C65 /* ResultsWidget.swift */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		25C06D062736D03900407C65 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				25C06D072736D0B800407C65 /* StartWorkoutWidget.swift */,
+			);
+			path = Workouts;
 			sourceTree = "<group>";
 		};
 		632F87242735C766008F2A5F /* projectRunWatch */ = {
@@ -774,8 +791,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C06D012736B6D700407C65 /* StatsSummaryHeaderView.swift in Sources */,
+				25C06D082736D0B800407C65 /* StartWorkoutWidget.swift in Sources */,
+				25C06D092736D22F00407C65 /* WorkoutView.swift in Sources */,
+				25C06D032736C8E700407C65 /* ResultsWidget.swift in Sources */,
 				25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */,
+				25C06D042736CB2100407C65 /* StatsSummaryView.swift in Sources */,
 				25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */,
+				25C06D0A2736D25000407C65 /* RoundedCorners.swift in Sources */,
 				25C06CFB2736ABB200407C65 /* RunWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
