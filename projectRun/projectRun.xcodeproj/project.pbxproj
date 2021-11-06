@@ -15,6 +15,11 @@
 		0AC4BB2B27360CE000024D5F /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2327360CB000024D5F /* Countdown.swift */; };
 		256CD50727361C1C00EA0E26 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutView.swift */; };
 		256CD50927361C4A00EA0E26 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50827361C4A00EA0E26 /* CardModifier.swift */; };
+		25C06CEA2736A2FD00407C65 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CE92736A2FD00407C65 /* WidgetKit.framework */; };
+		25C06CEC2736A2FD00407C65 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CEB2736A2FD00407C65 /* SwiftUI.framework */; };
+		25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */; };
+		25C06CF12736A2FF00407C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C06CF02736A2FF00407C65 /* Assets.xcassets */; };
+		25C06CF52736A2FF00407C65 /* projectRunWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87262735C767008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F87252735C767008F2A5F /* Assets.xcassets */; };
 		632F872C2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87332735C767008F2A5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87322735C767008F2A5F /* ContentView.swift */; };
@@ -49,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		25C06CF32736A2FF00407C65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE8F1D11273594DD00C3308E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25C06CE72736A2FD00407C65;
+			remoteInfo = projectRunWidgetExtension;
+		};
 		632F872D2735C767008F2A5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EE8F1D11273594DD00C3308E /* Project object */;
@@ -80,6 +92,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		25C06CF62736A2FF00407C65 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				25C06CF52736A2FF00407C65 /* projectRunWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		632F87442735C768008F2A5F /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,6 +133,12 @@
 		0AC4BB2527360CB000024D5F /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		256CD50627361C1C00EA0E26 /* WorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		256CD50827361C4A00EA0E26 /* CardModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = projectRunWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		25C06CE92736A2FD00407C65 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		25C06CEB2736A2FD00407C65 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunWidget.swift; sourceTree = "<group>"; };
+		25C06CF02736A2FF00407C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25C06CF22736A2FF00407C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632F87232735C766008F2A5F /* projectRunWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRunWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F87252735C767008F2A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "projectRunWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +179,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		25C06CE52736A2FD00407C65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C06CEC2736A2FD00407C65 /* SwiftUI.framework in Frameworks */,
+				25C06CEA2736A2FD00407C65 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		632F87282735C767008F2A5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +255,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		25C06CED2736A2FD00407C65 /* projectRunWidget */ = {
+			isa = PBXGroup;
+			children = (
+				25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */,
+				25C06CF02736A2FF00407C65 /* Assets.xcassets */,
+				25C06CF22736A2FF00407C65 /* Info.plist */,
+			);
+			path = projectRunWidget;
+			sourceTree = "<group>";
+		};
 		632F87242735C766008F2A5F /* projectRunWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +306,8 @@
 			children = (
 				632F87572735C9B1008F2A5F /* HealthKit.framework */,
 				632F87542735C9A6008F2A5F /* HealthKit.framework */,
+				25C06CE92736A2FD00407C65 /* WidgetKit.framework */,
+				25C06CEB2736A2FD00407C65 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,6 +354,7 @@
 				EE8F1D3B273594DF00C3308E /* projectRunUITests */,
 				632F87242735C766008F2A5F /* projectRunWatch */,
 				632F872F2735C767008F2A5F /* projectRunWatch WatchKit Extension */,
+				25C06CED2736A2FD00407C65 /* projectRunWidget */,
 				EE8F1D1A273594DD00C3308E /* Products */,
 				632F87532735C9A6008F2A5F /* Frameworks */,
 			);
@@ -317,6 +368,7 @@
 				EE8F1D38273594DF00C3308E /* projectRunUITests.xctest */,
 				632F87232735C766008F2A5F /* projectRunWatch.app */,
 				632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */,
+				25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -426,6 +478,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		25C06CE72736A2FD00407C65 /* projectRunWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25C06CF92736A2FF00407C65 /* Build configuration list for PBXNativeTarget "projectRunWidgetExtension" */;
+			buildPhases = (
+				25C06CE42736A2FD00407C65 /* Sources */,
+				25C06CE52736A2FD00407C65 /* Frameworks */,
+				25C06CE62736A2FD00407C65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = projectRunWidgetExtension;
+			productName = projectRunWidgetExtension;
+			productReference = 25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		632F87222735C766008F2A5F /* projectRunWatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 632F874B2735C768008F2A5F /* Build configuration list for PBXNativeTarget "projectRunWatch" */;
@@ -468,11 +537,13 @@
 				EE8F1D16273594DD00C3308E /* Frameworks */,
 				EE8F1D17273594DD00C3308E /* Resources */,
 				632F87442735C768008F2A5F /* Embed Watch Content */,
+				25C06CF62736A2FF00407C65 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				632F87422735C768008F2A5F /* PBXTargetDependency */,
+				25C06CF42736A2FF00407C65 /* PBXTargetDependency */,
 			);
 			name = projectRun;
 			productName = projectRun;
@@ -522,9 +593,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					25C06CE72736A2FD00407C65 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					632F87222735C766008F2A5F = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -562,11 +636,20 @@
 				EE8F1D37273594DF00C3308E /* projectRunUITests */,
 				632F87222735C766008F2A5F /* projectRunWatch */,
 				632F872A2735C767008F2A5F /* projectRunWatch WatchKit Extension */,
+				25C06CE72736A2FD00407C65 /* projectRunWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		25C06CE62736A2FD00407C65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C06CF12736A2FF00407C65 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		632F87212735C766008F2A5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,6 +694,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		25C06CE42736A2FD00407C65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		632F87272735C767008F2A5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,6 +762,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		25C06CF42736A2FF00407C65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25C06CE72736A2FD00407C65 /* projectRunWidgetExtension */;
+			targetProxy = 25C06CF32736A2FF00407C65 /* PBXContainerItemProxy */;
+		};
 		632F872E2735C767008F2A5F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 632F872A2735C767008F2A5F /* projectRunWatch WatchKit Extension */;
@@ -694,6 +790,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		25C06CF72736A2FF00407C65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 437V95VV9R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = projectRunWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = projectRunWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.projectRun.projectRunWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25C06CF82736A2FF00407C65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 437V95VV9R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = projectRunWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = projectRunWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.projectRun.projectRunWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		632F87452735C768008F2A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -933,6 +1083,7 @@
 		EE8F1D43273594DF00C3308E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = projectRun/projectRun.entitlements;
@@ -966,6 +1117,7 @@
 		EE8F1D44273594DF00C3308E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = projectRun/projectRun.entitlements;
@@ -1095,6 +1247,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		25C06CF92736A2FF00407C65 /* Build configuration list for PBXNativeTarget "projectRunWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25C06CF72736A2FF00407C65 /* Debug */,
+				25C06CF82736A2FF00407C65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		632F874A2735C768008F2A5F /* Build configuration list for PBXNativeTarget "projectRunWatch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
