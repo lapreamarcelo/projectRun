@@ -9,6 +9,7 @@ import Foundation
 
 struct Workout: Identifiable {
   let id = UUID()
+  let name: String
   let series: [Serie]
 
   var maxTime: Double {
@@ -17,7 +18,7 @@ struct Workout: Identifiable {
   }
 
   static func dummyWorkout() -> Workout {
-    Workout(series: [
+    Workout(name: "Workout #1", series: [
       Serie(title: "Serie #1", time: 1),
       Serie(title: "Serie #2", time: 20),
       Serie(title: "Serie #3", time: 10),
@@ -25,5 +26,24 @@ struct Workout: Identifiable {
       Serie(title: "Serie #5", time: 50),
       Serie(title: "Serie #6", time: 3),
     ])
+  }
+
+  static func dummyWorkouts() -> [Workout] {
+    [Workout(name: "Workout #1", series: [
+      Serie(title: "Serie #1", time: 1),
+      Serie(title: "Serie #2", time: 20),
+      Serie(title: "Serie #3", time: 10),
+      Serie(title: "Serie #4", time: 40),
+      Serie(title: "Serie #5", time: 50),
+      Serie(title: "Serie #6", time: 3),
+    ]),
+     Workout(name: "Workout #2", series: [
+       Serie(title: "Serie #1", time: 10),
+       Serie(title: "Serie #2", time: 40),
+       Serie(title: "Serie #3", time: 50),
+       Serie(title: "Serie #4", time: 10),
+       Serie(title: "Serie #5", time: 70),
+       Serie(title: "Serie #6", time: 9),
+     ])]
   }
 }
