@@ -47,9 +47,24 @@ struct WorkoutIntervalsView: View {
                             }
                         }
                     }
+                    .frame(height: reader.size.height / 2)
+                    .padding(.top, 13)
+                    VStack {
+                        Spacer()
+                        Text(Measurement(value: 100, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
+                            .bold()
+                            .font(.system(size: 18))
+                        Text("1 of 20")
+                            .font(.system(size: 12))
+                            .foregroundColor(.gray)
+    
+                    }
+                    .frame(width: reader.size.width)
+                    .padding(.bottom, 13)
                 }
             }
         }
+        .ignoresSafeArea()
     }
 }
 
