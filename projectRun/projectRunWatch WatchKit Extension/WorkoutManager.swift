@@ -140,7 +140,9 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
         if toState == .ended {
             builder?.endCollection(withEnd: date, completion: { success, error in
                 self.builder?.finishWorkout(completion: { workout, error in
-                    self.workout = workout
+                    DispatchQueue.main.async {
+                        self.workout = workout
+                    }
                 })
             })
         }

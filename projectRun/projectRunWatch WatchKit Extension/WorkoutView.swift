@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    @ObservedObject var workoutManager = WorkoutManager()
+    @StateObject var workoutManager = WorkoutManager()
     
     var body: some View {
         WorkoutOngoingView(workoutManager: workoutManager)

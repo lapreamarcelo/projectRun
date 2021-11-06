@@ -50,6 +50,10 @@ struct WorkoutIntervalsView: View {
                     .frame(height: reader.size.height / 2)
                     .padding(.top, 13)
                     VStack {
+                        Text(viewModel.pace + "'' Km")
+                            .foregroundColor(.yellow)
+                            .bold()
+                            .font(.system(size: 22))
                         Spacer()
                         Text(Measurement(value: 100, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
                             .bold()
