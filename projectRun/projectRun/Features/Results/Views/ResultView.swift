@@ -26,43 +26,9 @@ struct ResultView: View {
             .foregroundColor(.primary)
         }
       }
-      HStack {
-        VStack(spacing: 20) {
-          VStack {
-            Label("Avg. Heart Rate", systemImage: "heart")
-              .foregroundColor(.secondary)
-            Text("145")
-              .foregroundColor(.primary)
-          }
-
-          VStack {
-            Label("Avg. Pace", systemImage: "figure.walk")
-              .foregroundColor(.secondary)
-            Text("145")
-              .foregroundColor(.primary)
-          }
-        }
-        Spacer()
-        VStack(spacing: 20) {
-          VStack {
-            Label("Calories", systemImage: "flame")
-              .foregroundColor(.secondary)
-            Text("145")
-              .foregroundColor(.primary)
-          }
-          VStack {
-            Label("Time", systemImage: "clock")
-              .foregroundColor(.secondary)
-            Text("145")
-              .foregroundColor(.primary)
-          }
-        }
-        .font(.body)
-        Spacer()
-      }
-      .padding()
-      .roundCorners(radius: 20)
-
+      StatsSummaryView()
+        .padding()
+        .roundCorners(radius: 20)
       ChartView(workout: Workout.dummyWorkout())
         .background(LinearGradient(gradient: backgroundGradient, startPoint: .top, endPoint: .bottom))
         .roundCorners(radius: 20)

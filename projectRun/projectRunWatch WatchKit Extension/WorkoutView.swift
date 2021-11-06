@@ -2,19 +2,14 @@
 //  WorkoutView.swift
 //  projectRunWatch WatchKit Extension
 //
-//  Created by Marcelo Laprea on 6/11/21.
+//  Created by Sebastian Fernandez on 06/11/2021.
 //
 
 import SwiftUI
 
 struct WorkoutView: View {
-    @ObservedObject var workoutManager = WorkoutManager()
-    
     var body: some View {
-        WorkoutOngoingView(workoutManager: workoutManager)
-            .onAppear {
-                workoutManager.authorizeHealthKit()
-            }
+        WorkoutIntervalsView(viewModel: WorkoutIntervalsViewModel(workoutManger: WorkoutManager()))
     }
 }
 

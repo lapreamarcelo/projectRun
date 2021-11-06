@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CountdownView: View {
-    @ObservedObject var viewModel: CountDownViewModel
+    @ObservedObject var viewModel: CountdownViewModel
 
     var body: some View {
         Text("\(viewModel.currentNumber)")
-            .font(.system(size: 80))
-            .fontWeight(.bold)
+            .font(Double(viewModel.currentNumber) == Double.nan ? .system(size: 60) : .system(size: 80))
+            .italic()
+            .bold()
             .foregroundColor(.orange)
             .onAppear(perform: viewModel.startCountdown)
     }
@@ -22,7 +23,7 @@ struct CountdownView: View {
 struct CountDownView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CountdownView(viewModel: CountDownViewModel(seconds: 3))
+            CountdownView(viewModel: CountdownViewModel(seconds: 3))
                 .previewDevice("iPhone 12")
         }
     }

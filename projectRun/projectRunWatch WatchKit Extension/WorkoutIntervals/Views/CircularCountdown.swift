@@ -15,11 +15,13 @@ struct CircularCountdown: View {
     
     var body: some View {
         ZStack {
-            ProgressTrack(color: color, strokeWidth: strokeWidth)
-            ProgressBar(counter: progress, countTo: total, color: color, strokeWidth: strokeWidth)
+//            ProgressTrack(color: color, strokeWidth: strokeWidth)
+//            ProgressBar(counter: progress, countTo: total, color: color, strokeWidth: strokeWidth)
             Text(Measurement(value: progress, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
                 .bold()
-                .font(.system(size: 12))
+                .italic()
+                .foregroundColor(.orange)
+                .font(.system(size: 30))
         }
     }
 }

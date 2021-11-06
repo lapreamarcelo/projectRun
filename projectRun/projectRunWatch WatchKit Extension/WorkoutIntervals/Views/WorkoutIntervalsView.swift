@@ -26,25 +26,52 @@ struct WorkoutIntervalsView: View {
     var body: some View {
         TimelineView(MetricsTimelineSchedule(from: viewModel.workoutManager.builder?.startDate ?? Date())) { context in
             GeometryReader { reader in
-                VStack(alignment: .leading) {
-                    HStack(spacing: 12) {
+                VStack(alignment: .center) {
+                    VStack(spacing: 2) {
                         CircularCountdown(progress: $viewModel.workoutManager.distance, total: 100, color: .green, strokeWidth: 5)
                             .padding()
-                            .frame(width: reader.size.width * 0.4)
-                        VStack(alignment: .leading, spacing: 8) {
-                            HStack(spacing: 2) {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.red)
-                                Text(viewModel.workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " BPM")
-                                    .font(.system(size: 14))
+                        Spacer()
+                        HStack(alignment: .center) {
+                            VStack {
+                                HStack(spacing: 2) {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(.red)
+                                    Text(viewModel.workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))))
+                                        .font(.system(size: 25))
+                                        .bold()
+                                        .italic()
+                                        .foregroundColor(.orange)
+                                }
+                                Text("BPM")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.gray)
                             }
+                            Spacer()
+                            VStack {
+                                Text("5'43")
+                                    .font(.system(size: 25))
+                                    .bold()
+                                    .italic()
+                                    .foregroundColor(.orange)
+
+                                Text("Pace")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        .padding(.horizontal)
+
+                        VStack {
                             HStack(spacing: 5) {
                                 Image(systemName: "clock.fill")
                                     .foregroundColor(.white)
                                 ElapsedTimeView(elapsedTime: viewModel.workoutManager.builder?.elapsedTime ?? 0, showSubseconds: context.cadence == .live)
-                                    .font(.system(size: 14))
-                                    .foregroundColor(.white)
+                                    .font(.system(size: 25))
+                                    .foregroundColor(.orange)
                             }
+                            Text("Time elapsed")
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray)
                         }
                     }
                     .frame(height: reader.size.height / 2)
@@ -60,8 +87,9 @@ struct WorkoutIntervalsView: View {
     
                     }
                     .frame(width: reader.size.width)
-                    .padding(.bottom, 13)
+                    .padding(.bottom, 10)
                 }
+                .padding(.top, 25)
             }
         }
         .ignoresSafeArea()
