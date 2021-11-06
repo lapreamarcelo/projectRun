@@ -17,12 +17,12 @@ struct projectRunApp: App {
 
           #if os(iOS)
             TabView {
-              WorkoutView()
+              WorkoutsView()
                 .tabItem {
                   Image(systemName: "bolt.horizontal")
                   Text("Workouts")
                 }
-              WorkoutView()
+              WorkoutsView()
                 .tabItem {
                   Image(systemName: "figure.walk")
                   Text("Start")

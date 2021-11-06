@@ -36,7 +36,7 @@ struct StartWorkoutWidget: Widget {
 
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: STProvider()) { entry in
-      IntervalItemView()
+      WorkoutCardView()
     }
     .configurationDisplayName("Start Workout")
     .description("Quick access to start a workout")
