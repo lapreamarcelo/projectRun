@@ -2,6 +2,7 @@
 //  WorkoutView.swift
 //  projectRunWatch WatchKit Extension
 //
+//  Created by Sebastian Fernandez on 06/11/2021.
 //  Created by Marcelo Laprea on 6/11/21.
 //
 
