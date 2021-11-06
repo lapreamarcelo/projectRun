@@ -30,6 +30,11 @@
 		632F875C2735D60A008F2A5F /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875B2735D60A008F2A5F /* MetricsView.swift */; };
 		632F875E2735D8CA008F2A5F /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */; };
 		632F87602735DC9F008F2A5F /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875F2735DC9F008F2A5F /* WorkoutManager.swift */; };
+		EE88541327361A64008F4312 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541127361A64008F4312 /* ResultView.swift */; };
+		EE88541427361A64008F4312 /* ResultMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541227361A64008F4312 /* ResultMapView.swift */; };
+		EE88541927361A9B008F4312 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541627361A9B008F4312 /* Workout.swift */; };
+		EE88541A27361A9B008F4312 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541727361A9B008F4312 /* Serie.swift */; };
+		EE88541B27361A9B008F4312 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541827361A9B008F4312 /* ChartView.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -121,6 +126,11 @@
 		632F875B2735D60A008F2A5F /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
 		632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
 		632F875F2735DC9F008F2A5F /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		EE88541127361A64008F4312 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		EE88541227361A64008F4312 /* ResultMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultMapView.swift; sourceTree = "<group>"; };
+		EE88541627361A9B008F4312 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		EE88541727361A9B008F4312 /* Serie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		EE88541827361A9B008F4312 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -256,6 +266,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EE88540F27361A64008F4312 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				EE88541027361A64008F4312 /* Views */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		EE88541027361A64008F4312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE88541127361A64008F4312 /* ResultView.swift */,
+				EE88541227361A64008F4312 /* ResultMapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE88541527361A9B008F4312 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE88541627361A9B008F4312 /* Workout.swift */,
+				EE88541727361A9B008F4312 /* Serie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EE8F1D10273594DD00C3308E = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +383,8 @@
 		EE8F1D4F2735955900C3308E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EE88541827361A9B008F4312 /* ChartView.swift */,
+				EE88541527361A9B008F4312 /* Models */,
 				EE8F1D552735EB9900C3308E /* CustomModifiers */,
 			);
 			path = Core;
@@ -355,6 +393,7 @@
 		EE8F1D502735956000C3308E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EE88540F27361A64008F4312 /* Results */,
 				0AC4BB1F27360CB000024D5F /* CountDown */,
 				EE8F1D512735958F00C3308E /* Workouts */,
 			);
@@ -591,9 +630,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8F1D572735EBAE00C3308E /* RoundedCorners.swift in Sources */,
+				EE88541B27361A9B008F4312 /* ChartView.swift in Sources */,
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
+				EE88541A27361A9B008F4312 /* Serie.swift in Sources */,
+				EE88541327361A64008F4312 /* ResultView.swift in Sources */,
 				EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */,
+				EE88541427361A64008F4312 /* ResultMapView.swift in Sources */,
 				0AC4BB2627360CB000024D5F /* CountDownViewModel.swift in Sources */,
+				EE88541927361A9B008F4312 /* Workout.swift in Sources */,
 				0AC4BB2827360CB000024D5F /* CountdownView.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
