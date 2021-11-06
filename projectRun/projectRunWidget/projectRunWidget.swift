@@ -46,7 +46,6 @@ struct projectRunWidgetEntryView : View {
     }
 }
 
-@main
 struct projectRunWidget: Widget {
     let kind: String = "projectRunWidget"
 

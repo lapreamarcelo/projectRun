@@ -20,6 +20,8 @@
 		25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */; };
 		25C06CF12736A2FF00407C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C06CF02736A2FF00407C65 /* Assets.xcassets */; };
 		25C06CF52736A2FF00407C65 /* projectRunWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25C06CFB2736ABB200407C65 /* RunWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFA2736ABB200407C65 /* RunWidgetBundle.swift */; };
+		25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFD2736ACF200407C65 /* LastRunWidget.swift */; };
 		632F87262735C767008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F87252735C767008F2A5F /* Assets.xcassets */; };
 		632F872C2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87332735C767008F2A5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87322735C767008F2A5F /* ContentView.swift */; };
@@ -139,6 +141,8 @@
 		25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunWidget.swift; sourceTree = "<group>"; };
 		25C06CF02736A2FF00407C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25C06CF22736A2FF00407C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25C06CFA2736ABB200407C65 /* RunWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunWidgetBundle.swift; sourceTree = "<group>"; };
+		25C06CFD2736ACF200407C65 /* LastRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRunWidget.swift; sourceTree = "<group>"; };
 		632F87232735C766008F2A5F /* projectRunWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRunWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F87252735C767008F2A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "projectRunWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,11 +262,21 @@
 		25C06CED2736A2FD00407C65 /* projectRunWidget */ = {
 			isa = PBXGroup;
 			children = (
+				25C06CFC2736ACB400407C65 /* Results */,
 				25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */,
 				25C06CF02736A2FF00407C65 /* Assets.xcassets */,
 				25C06CF22736A2FF00407C65 /* Info.plist */,
+				25C06CFA2736ABB200407C65 /* RunWidgetBundle.swift */,
 			);
 			path = projectRunWidget;
+			sourceTree = "<group>";
+		};
+		25C06CFC2736ACB400407C65 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				25C06CFD2736ACF200407C65 /* LastRunWidget.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 		632F87242735C766008F2A5F /* projectRunWatch */ = {
@@ -699,6 +713,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */,
+				25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */,
+				25C06CFB2736ABB200407C65 /* RunWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
