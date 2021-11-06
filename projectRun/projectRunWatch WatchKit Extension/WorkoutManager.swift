@@ -36,7 +36,6 @@ class WorkoutManager: NSObject, ObservableObject {
             
         }
     }
-
     
     func startWorkout() {
         let configuration = HKWorkoutConfiguration()
@@ -140,7 +139,9 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
         if toState == .ended {
             builder?.endCollection(withEnd: date, completion: { success, error in
                 self.builder?.finishWorkout(completion: { workout, error in
+                  DispatchQueue.main.async {
                     self.workout = workout
+                  }
                 })
             })
         }
