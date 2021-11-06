@@ -30,7 +30,7 @@ struct WorkoutIntervalsView: View {
                     HStack(spacing: 12) {
                         CircularCountdown(progress: $viewModel.workoutManager.distance, total: 100, color: .green, strokeWidth: 5)
                             .padding()
-                            .frame(width: reader.size.width / 2.5)
+                            .frame(width: reader.size.width * 0.4)
                         VStack(alignment: .leading, spacing: 8) {
                             HStack(spacing: 2) {
                                 Image(systemName: "heart.fill")
