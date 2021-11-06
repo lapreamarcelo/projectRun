@@ -11,7 +11,7 @@ struct WorkoutView: View {
     @ObservedObject var workoutManager = WorkoutManager()
     
     var body: some View {
-        MetricsView(workoutManager: workoutManager)
+        WorkoutOngoingView(workoutManager: workoutManager)
             .onAppear {
                 workoutManager.authorizeHealthKit()
             }
