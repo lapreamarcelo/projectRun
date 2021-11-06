@@ -56,8 +56,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "projectRunWatch WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/projectRunWatch">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "632F87222735C766008F2A5F"
@@ -65,7 +67,7 @@
             BlueprintName = "projectRunWatch"
             ReferencedContainer = "container:projectRun.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,8 +77,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "projectRunWatch WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/projectRunWatch">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "632F87222735C766008F2A5F"
@@ -84,7 +88,16 @@
             BlueprintName = "projectRunWatch"
             ReferencedContainer = "container:projectRun.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "632F87222735C766008F2A5F"
+            BuildableName = "projectRunWatch.app"
+            BlueprintName = "projectRunWatch"
+            ReferencedContainer = "container:projectRun.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
