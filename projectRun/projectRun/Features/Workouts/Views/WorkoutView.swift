@@ -14,11 +14,7 @@ struct WorkoutView: View {
   var body: some View {
     NavigationView {
       VStack {
-        Button {
-          showingSheet.toggle()
-        } label: {
-          Label("Add Item", systemImage: "plus")
-        }
+        IntervalItemView()
       }
       .navigationBarTitle(Text("Workout"))
       .toolbar {
@@ -54,7 +50,6 @@ struct AddIntervalView: View {
   @State private var pace: Int = 0
 
   var body: some View {
-
     ZStack(alignment: .topTrailing) {
       VStack {
         Spacer()
@@ -67,7 +62,8 @@ struct AddIntervalView: View {
               Picker("Measure", selection: $measure) {
                 Text("m").tag(0)
                 Text("Km").tag(1)
-              }.pickerStyle(MenuPickerStyle())
+              }
+              .pickerStyle(MenuPickerStyle())
             }
 
             Stepper(value: $rest, in: 1...99) {
@@ -108,5 +104,26 @@ struct AddIntervalView: View {
           .font(.title)
       }.padding(20)
     }
+  }
+}
+
+// MARK: - IntervalItemView
+struct IntervalItemView: View {
+  var body: some View {
+    VStack(alignment: .leading) {
+      Text("Title")
+        .font(.system(size: 26, weight: .bold, design: .default))
+        .foregroundColor(.white)
+        .padding([.leading, .trailing])
+
+      Text("Type")
+        .font(.system(size: 16, weight: .bold, design: .default))
+        .foregroundColor(.gray)
+        .padding([.leading, .trailing])
+    }
+    .frame(width: 175, height: 175, alignment: .leading)
+    .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
+    .modifier(CardModifier())
+    .padding(.all, 10)
   }
 }
