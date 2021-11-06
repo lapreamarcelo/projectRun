@@ -31,6 +31,8 @@
 		632F875C2735D60A008F2A5F /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875B2735D60A008F2A5F /* MetricsView.swift */; };
 		632F875E2735D8CA008F2A5F /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */; };
 		632F87602735DC9F008F2A5F /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F875F2735DC9F008F2A5F /* WorkoutManager.swift */; };
+		638CDE2627369708001A267B /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CDE2527369708001A267B /* WorkoutView.swift */; };
+		638CDE27273697CB001A267B /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE88541327361A64008F4312 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541127361A64008F4312 /* ResultView.swift */; };
 		EE88541427361A64008F4312 /* ResultMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541227361A64008F4312 /* ResultMapView.swift */; };
 		EE88541927361A9B008F4312 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541627361A9B008F4312 /* Workout.swift */; };
@@ -129,6 +131,7 @@
 		632F875B2735D60A008F2A5F /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
 		632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
 		632F875F2735DC9F008F2A5F /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		638CDE2527369708001A267B /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		EE88541127361A64008F4312 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		EE88541227361A64008F4312 /* ResultMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultMapView.swift; sourceTree = "<group>"; };
 		EE88541627361A9B008F4312 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -231,6 +234,7 @@
 				632F87522735C9A6008F2A5F /* projectRunWatch WatchKit Extension.entitlements */,
 				632F87322735C767008F2A5F /* ContentView.swift */,
 				632F875B2735D60A008F2A5F /* MetricsView.swift */,
+				638CDE2527369708001A267B /* WorkoutView.swift */,
 				632F875F2735DC9F008F2A5F /* WorkoutManager.swift */,
 				632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */,
 				632F87592735CD4B008F2A5F /* HealthKitManagerWatch.swift */,
@@ -625,6 +629,8 @@
 				632F87332735C767008F2A5F /* ContentView.swift in Sources */,
 				632F87392735C767008F2A5F /* ComplicationController.swift in Sources */,
 				632F87372735C767008F2A5F /* NotificationView.swift in Sources */,
+				638CDE27273697CB001A267B /* projectRunApp.swift in Sources */,
+				638CDE2627369708001A267B /* WorkoutView.swift in Sources */,
 				0AC4BB2B27360CE000024D5F /* Countdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
