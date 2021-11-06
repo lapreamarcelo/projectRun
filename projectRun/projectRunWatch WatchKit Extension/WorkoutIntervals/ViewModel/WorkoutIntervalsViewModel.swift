@@ -37,13 +37,22 @@ private extension WorkoutIntervalsViewModel {
             }
             .store(in: &subscriptions)
         
-        start().sink { seconds in
+        workoutManager
+            .$running
+            .sink { [weak self] isRunning in
+                if !isRunning {
+                    self?.timer.connect().cancel()
+                }
+            }
+            .store(in: &subscriptions)
+        
+        startTimer().sink { seconds in
             self.currentTime = TimeInterval(seconds)
         }
         .store(in: &subscriptions)
     }
     
-    func start() -> AnyPublisher<Int, Never> {
+    func startTimer() -> AnyPublisher<Int, Never> {
         timer.autoconnect()
             .map { [weak self] _ in
                 guard let self = self else { return 0 }
