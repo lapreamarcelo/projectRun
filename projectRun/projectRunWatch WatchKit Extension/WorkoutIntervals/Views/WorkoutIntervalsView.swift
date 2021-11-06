@@ -10,25 +10,41 @@ import SwiftUI
 struct WorkoutIntervalsView: View {
     @ObservedObject var viewModel: WorkoutIntervalsViewModel
     
+    private struct MetricsTimelineSchedule: TimelineSchedule {
+        var startDate: Date
+        
+        init(from startDate: Date) {
+            self.startDate = startDate
+        }
+        
+        func entries(from startDate: Date, mode: TimelineScheduleMode) -> PeriodicTimelineSchedule.Entries {
+            PeriodicTimelineSchedule(from: self.startDate, by: (mode == .lowFrequency ? 1.0 : 1.0 / 30.0))
+                .entries(from: startDate, mode: mode)
+        }
+    }
+    
     var body: some View {
-        VStack {
-            GeometryReader {   reader in
-                HStack(spacing: 12) {
-                    CircularCountdown(progress: $viewModel.workoutManager.distance, total: 100, color: .green, strokeWidth: 6)
-                        .padding()
-                        .frame(width: reader.size.width / 2.5)
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack(spacing: 2) {
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(.red)
-                            Text(viewModel.workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + "BPM")
-                                .font(.system(size: 14))
-                        }
-                        HStack(spacing: 7) {
-                            Image(systemName: "figure.walk")
-                                .foregroundColor(.white)
-                            Text("5:30" + " ''/Km")
-                                .font(.system(size: 14))
+        TimelineView(MetricsTimelineSchedule(from: viewModel.workoutManager.builder?.startDate ?? Date())) { context in
+            GeometryReader { reader in
+                VStack(alignment: .leading) {
+                    HStack(spacing: 12) {
+                        CircularCountdown(progress: $viewModel.workoutManager.distance, total: 100, color: .green, strokeWidth: 5)
+                            .padding()
+                            .frame(width: reader.size.width / 2.5)
+                        VStack(alignment: .leading, spacing: 8) {
+                            HStack(spacing: 2) {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(.red)
+                                Text(viewModel.workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " BPM")
+                                    .font(.system(size: 14))
+                            }
+                            HStack(spacing: 5) {
+                                Image(systemName: "clock.fill")
+                                    .foregroundColor(.white)
+                                ElapsedTimeView(elapsedTime: viewModel.workoutManager.builder?.elapsedTime ?? 0, showSubseconds: context.cadence == .live)
+                                    .font(.system(size: 14))
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                 }

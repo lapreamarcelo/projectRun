@@ -19,7 +19,7 @@ struct CircularCountdown: View {
             ProgressBar(counter: progress, countTo: total, color: color, strokeWidth: strokeWidth)
             Text(Measurement(value: progress, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
                 .bold()
-                .font(.system(size: 14))
+                .font(.system(size: 12))
         }
     }
 }

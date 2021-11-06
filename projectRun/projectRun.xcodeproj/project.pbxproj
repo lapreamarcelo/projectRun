@@ -245,7 +245,6 @@
 				632F875B2735D60A008F2A5F /* MetricsView.swift */,
 				638CDE2527369708001A267B /* WorkoutView.swift */,
 				632F875F2735DC9F008F2A5F /* WorkoutManager.swift */,
-				632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */,
 				632F87592735CD4B008F2A5F /* HealthKitManagerWatch.swift */,
 				632F87342735C767008F2A5F /* NotificationController.swift */,
 				632F87362735C767008F2A5F /* NotificationView.swift */,
@@ -297,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				63817895273698FF004CA1F2 /* CircularCountdown.swift */,
+				632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */,
 				6381789C273699AC004CA1F2 /* WorkoutIntervalsView.swift */,
 			);
 			path = Views;
