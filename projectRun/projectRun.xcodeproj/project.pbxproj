@@ -14,7 +14,6 @@
 		0AC4BB2A27360CC800024D5F /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2527360CB000024D5F /* CountdownView.swift */; };
 		0AC4BB2B27360CE000024D5F /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2327360CB000024D5F /* Countdown.swift */; };
 		256CD50727361C1C00EA0E26 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutView.swift */; };
-		256CD50927361C4A00EA0E26 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50827361C4A00EA0E26 /* CardModifier.swift */; };
 		25C06CEA2736A2FD00407C65 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CE92736A2FD00407C65 /* WidgetKit.framework */; };
 		25C06CEC2736A2FD00407C65 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CEB2736A2FD00407C65 /* SwiftUI.framework */; };
 		25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */; };
@@ -22,6 +21,8 @@
 		25C06CF52736A2FF00407C65 /* projectRunWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		25C06CFB2736ABB200407C65 /* RunWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFA2736ABB200407C65 /* RunWidgetBundle.swift */; };
 		25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFD2736ACF200407C65 /* LastRunWidget.swift */; };
+		25C06D002736B5F200407C65 /* StatsSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */; };
+		25C06D012736B6D700407C65 /* StatsSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */; };
 		632F87262735C767008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F87252735C767008F2A5F /* Assets.xcassets */; };
 		632F872C2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87332735C767008F2A5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87322735C767008F2A5F /* ContentView.swift */; };
@@ -138,7 +139,6 @@
 		0AC4BB2327360CB000024D5F /* Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 		0AC4BB2527360CB000024D5F /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		256CD50627361C1C00EA0E26 /* WorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
-		256CD50827361C4A00EA0E26 /* CardModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = projectRunWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C06CE92736A2FD00407C65 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		25C06CEB2736A2FD00407C65 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -147,6 +147,7 @@
 		25C06CF22736A2FF00407C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25C06CFA2736ABB200407C65 /* RunWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunWidgetBundle.swift; sourceTree = "<group>"; };
 		25C06CFD2736ACF200407C65 /* LastRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRunWidget.swift; sourceTree = "<group>"; };
+		25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSummaryHeaderView.swift; sourceTree = "<group>"; };
 		632F87232735C766008F2A5F /* projectRunWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRunWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F87252735C767008F2A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "projectRunWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +357,7 @@
 				EE88541127361A64008F4312 /* ResultView.swift */,
 				EE88541227361A64008F4312 /* ResultMapView.swift */,
 				EE88542427369EFC008F4312 /* StatsSummaryView.swift */,
+				25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -771,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C06D012736B6D700407C65 /* StatsSummaryHeaderView.swift in Sources */,
 				25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */,
 				25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */,
 				25C06CFB2736ABB200407C65 /* RunWidgetBundle.swift in Sources */,
@@ -817,6 +820,7 @@
 				EE88542B2736AA45008F4312 /* ActivityHeader.swift in Sources */,
 				EE8854322736AFFD008F4312 /* RunView.swift in Sources */,
 				0AC4BB2727360CB000024D5F /* Countdown.swift in Sources */,
+				25C06D002736B5F200407C65 /* StatsSummaryHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
