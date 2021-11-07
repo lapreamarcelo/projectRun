@@ -24,51 +24,55 @@ struct WorkoutIntervalsView: View {
     }
     
     var body: some View {
-        TimelineView(MetricsTimelineSchedule(from: viewModel.workoutManager.builder?.startDate ?? Date())) { context in
-            GeometryReader { reader in
-                VStack(alignment: .leading) {
-                    HStack(spacing: 12) {
-                        CircularCountdown(progress: $viewModel.workoutManager.distance, total: 100, color: .green, strokeWidth: 5)
-                            .padding()
-                            .frame(width: reader.size.width * 0.4)
-                        VStack(alignment: .leading, spacing: 8) {
-                            HStack(spacing: 2) {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.red)
-                                Text(viewModel.workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " BPM")
-                                    .font(.system(size: 14))
-                            }
-                            HStack(spacing: 5) {
-                                Image(systemName: "clock.fill")
-                                    .foregroundColor(.white)
-                                ElapsedTimeView(elapsedTime: viewModel.workoutManager.builder?.elapsedTime ?? 0, showSubseconds: context.cadence == .live)
-                                    .font(.system(size: 14))
-                                    .foregroundColor(.white)
+        if viewModel.shouldStartRest {
+            Text("RESTING")
+        } else {
+            TimelineView(MetricsTimelineSchedule(from: viewModel.workoutManager.builder?.startDate ?? Date())) { context in
+                GeometryReader { reader in
+                    VStack(alignment: .leading) {
+                        HStack(spacing: 12) {
+                            CircularCountdown(progress: $viewModel.distance, total: 100, color: .green, strokeWidth: 5)
+                                .padding()
+                                .frame(width: reader.size.width * 0.4)
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack(spacing: 2) {
+                                    Image(systemName: "heart.fill")
+                                        .foregroundColor(.red)
+                                    Text(viewModel.workoutManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " BPM")
+                                        .font(.system(size: 14))
+                                }
+                                HStack(spacing: 5) {
+                                    Image(systemName: "clock.fill")
+                                        .foregroundColor(.white)
+                                    ElapsedTimeView(elapsedTime: viewModel.workoutManager.builder?.elapsedTime ?? 0, showSubseconds: context.cadence == .live)
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.white)
+                                }
                             }
                         }
+                        .frame(height: reader.size.height / 2)
+                        .padding(.top, 13)
+                        VStack {
+                            Text(viewModel.pace + "'' Km")
+                                .foregroundColor(.yellow)
+                                .bold()
+                                .font(.system(size: 22))
+                            Spacer()
+                            Text(Measurement(value: 100, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
+                                .bold()
+                                .font(.system(size: 18))
+                            Text("1 of 20")
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray)
+                            
+                        }
+                        .frame(width: reader.size.width)
+                        .padding(.bottom, 13)
                     }
-                    .frame(height: reader.size.height / 2)
-                    .padding(.top, 13)
-                    VStack {
-                        Text(viewModel.pace + "'' Km")
-                            .foregroundColor(.yellow)
-                            .bold()
-                            .font(.system(size: 22))
-                        Spacer()
-                        Text(Measurement(value: 100, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
-                            .bold()
-                            .font(.system(size: 18))
-                        Text("1 of 20")
-                            .font(.system(size: 12))
-                            .foregroundColor(.gray)
-    
-                    }
-                    .frame(width: reader.size.width)
-                    .padding(.bottom, 13)
                 }
             }
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
     }
 }
 
