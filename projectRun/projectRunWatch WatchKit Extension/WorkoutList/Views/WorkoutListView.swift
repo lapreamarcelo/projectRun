@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct WorkoutListView: View {
-  private let viewModel = WorkoutListViewModel()
+  @EnvironmentObject private var viewModel: WorkoutListViewModel
+
   var body: some View {
     NavigationView {
       List(viewModel.workouts) { workout in
