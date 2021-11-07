@@ -14,9 +14,11 @@ struct RunView: View {
   var body: some View {
     NavigationView {
       VStack(alignment: .center) {
-        StatsSummaryView()
-          .padding()
-          .roundCorners(radius: 20)
+        NavigationLink(destination: ResultView()) {
+          StatsSummaryView()
+            .padding()
+            .roundCorners(radius: 20)
+        }
         Spacer()
         Image("figure-run-\(number)")
           .resizable()
