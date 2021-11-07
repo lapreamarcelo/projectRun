@@ -73,6 +73,7 @@
 		EE8854512736DA9D008F4312 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854502736DA9D008F4312 /* StatsSummaryView.swift */; };
 		EE8854532736DAF6008F4312 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854502736DA9D008F4312 /* StatsSummaryView.swift */; };
 		EE8854542736DE64008F4312 /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
+		EE88545927374759008F4312 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88545827374759008F4312 /* RunView.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -215,6 +216,7 @@
 		EE88544B2736DA09008F4312 /* ActivityHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHeader.swift; sourceTree = "<group>"; };
 		EE88544C2736DA09008F4312 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		EE8854502736DA9D008F4312 /* StatsSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsSummaryView.swift; sourceTree = "<group>"; };
+		EE88545827374759008F4312 /* RunView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -520,6 +522,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EE88545627374759008F4312 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				EE88545727374759008F4312 /* Views */,
+			);
+			path = Run;
+			sourceTree = "<group>";
+		};
+		EE88545727374759008F4312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE88545827374759008F4312 /* RunView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EE8F1D10273594DD00C3308E = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +643,7 @@
 		EE8F1D502735956000C3308E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EE88545627374759008F4312 /* Run */,
 				EE8854472736DA09008F4312 /* Home */,
 				EE88540F27361A64008F4312 /* Results */,
 				0AC4BB1F27360CB000024D5F /* CountDown */,
@@ -944,6 +963,7 @@
 				EE88543C2736C8D7008F4312 /* WorkoutRepository.swift in Sources */,
 				EE88544D2736DA09008F4312 /* ActivityHeader.swift in Sources */,
 				EE8854512736DA9D008F4312 /* StatsSummaryView.swift in Sources */,
+				EE88545927374759008F4312 /* RunView.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
 				0AC4BB2727360CB000024D5F /* Countdown.swift in Sources */,
 				25C06D002736B5F200407C65 /* StatsSummaryHeaderView.swift in Sources */,

@@ -22,10 +22,10 @@ struct projectRunApp: App {
                   Image(systemName: "bolt.horizontal")
                   Text("Workouts")
                 }
-              WorkoutsView()
+              RunView()
                 .tabItem {
                   Image(systemName: "figure.walk")
-                  Text("Start")
+                  Text("Run")
                 }
               ActivityView()
                 .tabItem {
