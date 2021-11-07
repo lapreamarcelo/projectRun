@@ -11,7 +11,7 @@ import Combine
 
 class CountdownViewModel: ObservableObject {
     @Published var currentNumber: String
-    @Published var running: Bool
+    @Published var finished: Bool
 
     private var startedAt: Date
 
@@ -21,20 +21,23 @@ class CountdownViewModel: ObservableObject {
     init(seconds: Int) {
         startedAt = Date()
         currentNumber = String(seconds)
-        running = false
+        finished = false
 
         countdown = Countdown(seconds: seconds)
     }
 
     func startCountdown() {
-        running = true
         timerSubscription = countdown.start()
             .sink { [weak self] currentNumber in
-                guard currentNumber > 0 else {
+                guard currentNumber > -1 else {
                     self?.timerSubscription?.cancel()
-                    self?.currentNumber = String("RUN")
-                    self?.running = false
+                    self?.finished = true
                     return
+                }
+
+                guard currentNumber > 0 else {
+                    self?.currentNumber = String("RUN")
+                    return 
                 }
 
                 self?.currentNumber = String(currentNumber)

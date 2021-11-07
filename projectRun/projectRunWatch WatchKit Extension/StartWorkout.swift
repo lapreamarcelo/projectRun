@@ -9,6 +9,8 @@ import SwiftUI
 
 struct StartWorkout: View {
     @State var counting: Bool = false
+    @StateObject var workoutManager = WorkoutManager()
+
     @ObservedObject var countdownViewModel = CountdownViewModel(seconds: 3)
 
     var body: some View {
@@ -29,6 +31,13 @@ struct StartWorkout: View {
             }
             .background(.orange)
             .clipShape(Circle())
+        } else if countdownViewModel.finished {
+            WorkoutOngoingView(workoutManager: workoutManager)
+                .animation(.default.delay(2), value: countdownViewModel.finished)
+                .transition(.opacity)
+                .onAppear {
+                    workoutManager.authorizeHealthKit()
+                }
         } else {
             CountdownView(viewModel: countdownViewModel)
                 .transition(.opacity)

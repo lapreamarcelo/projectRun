@@ -9,13 +9,8 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    @StateObject var workoutManager = WorkoutManager()
-    
     var body: some View {
-        WorkoutOngoingView(workoutManager: workoutManager)
-            .onAppear {
-                workoutManager.authorizeHealthKit()
-            }
+        StartWorkout()
     }
 }
 
