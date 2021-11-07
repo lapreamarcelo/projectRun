@@ -9,13 +9,18 @@
 import SwiftUI
 
 struct WorkoutView: View {
+    @EnvironmentObject private var workoutManager: WorkoutManager
+
     var body: some View {
-        StartWorkout()
+        WorkoutListView()
+            .onAppear {
+                workoutManager.authorizeHealthKit()
+            }
     }
 }
 
 struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutView()
+        WorkoutListView()
     }
 }

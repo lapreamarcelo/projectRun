@@ -13,6 +13,7 @@ struct projectRunApp: App {
         WindowGroup {
           #if os(watchOS)
             WorkoutView()
+                .environmentObject(WorkoutManager())
           #endif
 
           #if os(iOS)

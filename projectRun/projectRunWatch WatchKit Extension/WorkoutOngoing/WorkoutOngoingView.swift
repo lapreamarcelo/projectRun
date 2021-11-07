@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct WorkoutOngoingView: View {
-    var workoutManager: WorkoutManager
+    @EnvironmentObject private var workoutManager: WorkoutManager
     @State private var selection: Tab = .workoutDetail
+    let workout: Workout
     
     var body: some View {
         TabView(selection: $selection) {
             WorkoutControlsView(workoutManager: workoutManager).tag(Tab.controls)
-            WorkoutIntervalsView(viewModel: WorkoutIntervalsViewModel(workoutManger: workoutManager)).tag(Tab.workoutDetail)
+            WorkoutIntervalsView(viewModel: WorkoutIntervalsViewModel(workoutManger: workoutManager, workout: workout)).tag(Tab.workoutDetail)
         }
         .onAppear {
             workoutManager.startWorkout()
@@ -31,6 +32,6 @@ private extension WorkoutOngoingView {
 
 struct WorkoutOngoingView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutOngoingView(workoutManager: WorkoutManager())
+        WorkoutOngoingView(workout: Workout(name: "", series: []))
     }
 }

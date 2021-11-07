@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WorkoutControlsView: View {
-    @ObservedObject var workoutManager: WorkoutManager
+    var workoutManager: WorkoutManager
     
     var body: some View {
         HStack {

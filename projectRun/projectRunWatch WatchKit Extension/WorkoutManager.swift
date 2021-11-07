@@ -9,6 +9,7 @@ import Foundation
 import HealthKit
 
 class WorkoutManager: NSObject, ObservableObject {
+    #if os(watchOS)
     let healthStore = HKHealthStore()
     
     var session: HKWorkoutSession?
@@ -125,8 +126,10 @@ class WorkoutManager: NSObject, ObservableObject {
         heartRate = 0
         distance = 0
     }
+    #endif
 }
 
+#if os(watchOS)
 extension WorkoutManager: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
         print("DID FAILED")
@@ -162,3 +165,4 @@ extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
     }
 }
+#endif

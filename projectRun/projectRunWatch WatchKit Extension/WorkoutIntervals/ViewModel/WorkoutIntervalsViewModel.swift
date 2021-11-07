@@ -9,12 +9,6 @@ import Combine
 import HealthKit
 import SwiftUI
 
-struct CurrentWorkout {
-    let pace: String
-    let distance: Double
-    let time: Int
-}
-
 class CurrentInterval {
     let startDistance: Double
     var finalDistance: Double
@@ -42,13 +36,13 @@ class CurrentInterval {
 
 class WorkoutIntervalsViewModel: ObservableObject {
     @Published var workoutManager: WorkoutManager
+    @Published var workout: Workout
     @Published var shouldStartRest: Bool = false
     @Published var pace: String = "00:00"
     @Published var distance: Double = 0
     
     private var currentSeconds: Int = 0
     private var currentRestSeconds: Int = 0
-    private var currentWorkouts: [CurrentWorkout] = []
     private var currentIntervals: [CurrentInterval] = []
     private var lastRestDistance: Double = 0
     
@@ -59,8 +53,12 @@ class WorkoutIntervalsViewModel: ObservableObject {
     
     private var subscriptions: Set<AnyCancellable> = []
     
-    init(workoutManger: WorkoutManager) {
+    init(workoutManger: WorkoutManager, workout: Workout) {
         self.workoutManager = workoutManger
+        self.workout = workout
+        
+        print("SUPER FLAG")
+        print(workout)
         self.currentIntervals.append(CurrentInterval(startDistance: 0,
                                                      finalDistance: 0,
                                                      goalDistance: 20))
