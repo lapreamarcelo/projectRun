@@ -48,7 +48,7 @@ struct WorkoutIntervalsView: View {
                             }
                             Spacer()
                             VStack {
-                                Text("5'43")
+                                Text(viewModel.pace)
                                     .font(.system(size: 25))
                                     .bold()
                                     .italic()
@@ -74,14 +74,10 @@ struct WorkoutIntervalsView: View {
                                 .foregroundColor(.gray)
                         }
                     }
-                    .frame(height: reader.size.height / 2)
+//                    .frame(height: reader.size.height / 2)
                     .padding(.top, 13)
+                    Spacer()
                     VStack {
-                        Text(viewModel.pace + "'' Km")
-                            .foregroundColor(.yellow)
-                            .bold()
-                            .font(.system(size: 22))
-                        Spacer()
                         Text(Measurement(value: 100, unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road)))
                             .bold()
                             .font(.system(size: 18))
