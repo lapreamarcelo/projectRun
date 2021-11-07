@@ -33,6 +33,8 @@
 		25C06D0C2737497100407C65 /* WorkoutFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D0B2737497100407C65 /* WorkoutFormView.swift */; };
 		25C06D0F27374A4500407C65 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D0E27374A4500407C65 /* WorkoutCardView.swift */; };
 		25C06D1127374A8100407C65 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D0E27374A4500407C65 /* WorkoutCardView.swift */; };
+		25DA93DE2737C90800BD6C12 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541627361A9B008F4312 /* Workout.swift */; };
+		25DA93DF2737C90E00BD6C12 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541727361A9B008F4312 /* Serie.swift */; };
 		632F87262735C767008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F87252735C767008F2A5F /* Assets.xcassets */; };
 		632F872C2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87352735C767008F2A5F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87342735C767008F2A5F /* NotificationController.swift */; };
@@ -874,10 +876,12 @@
 			files = (
 				25C06D082736D0B800407C65 /* StartWorkoutWidget.swift in Sources */,
 				EE8854532736DAF6008F4312 /* StatsSummaryView.swift in Sources */,
+				25DA93DF2737C90E00BD6C12 /* Serie.swift in Sources */,
 				EE88544F2736DA77008F4312 /* StatsSummaryHeaderView.swift in Sources */,
 				25C06D1127374A8100407C65 /* WorkoutCardView.swift in Sources */,
 				25C06D032736C8E700407C65 /* ResultsWidget.swift in Sources */,
 				25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */,
+				25DA93DE2737C90800BD6C12 /* Workout.swift in Sources */,
 				25C06D042736CB2100407C65 /* (null) in Sources */,
 				25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */,
 				25C06D0A2736D25000407C65 /* RoundedCorners.swift in Sources */,

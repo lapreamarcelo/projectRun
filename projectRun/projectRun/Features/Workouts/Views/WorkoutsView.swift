@@ -21,7 +21,7 @@ struct WorkoutsView: View {
       ScrollView {
         LazyVGrid(columns: columns) {
           ForEach(viewModel.workouts) { workout in
-            WorkoutCardView()
+            WorkoutCardView(workout: workout)
           }
         }
         Spacer()
