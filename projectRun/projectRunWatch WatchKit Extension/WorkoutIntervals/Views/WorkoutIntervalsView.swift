@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct WorkoutIntervalsView: View {
-    @ObservedObject var viewModel: WorkoutIntervalsViewModel
+  @ObservedObject var viewModel: WorkoutIntervalsViewModel
+  private let timer = Timer.publish(every: 1, on: .main, in: .common)
+  @State private var restProgress = 0.0
+  @State private var restGoal = 10.0
     
     private struct MetricsTimelineSchedule: TimelineSchedule {
         var startDate: Date
@@ -24,8 +27,25 @@ struct WorkoutIntervalsView: View {
     }
     
     var body: some View {
-        if viewModel.shouldStartRest {
-            Text("RESTING")
+      if viewModel.shouldStartRest && restGoal > 0 {
+          ZStack {
+            Text("REST")
+              RestCountdown(progress: $restProgress, total: restGoal, color: .blue, strokeWidth: 10)
+                .onReceive(timer) { _ in
+                  print(restProgress)
+                  if restProgress >= restGoal {
+                    restGoal = 0
+                  }
+                  withAnimation(.easeIn(duration: 1.0)) {
+                    restProgress += 1
+                  }
+                }
+
+          }
+          .padding(30)
+          .onAppear {
+            _ = timer.connect()
+          }
         } else {
             TimelineView(MetricsTimelineSchedule(from: viewModel.workoutManager.builder?.startDate ?? Date())) { context in
                 GeometryReader { reader in

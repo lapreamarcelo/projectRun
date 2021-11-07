@@ -74,6 +74,8 @@
 		EE8854532736DAF6008F4312 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854502736DA9D008F4312 /* StatsSummaryView.swift */; };
 		EE8854542736DE64008F4312 /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE88545927374759008F4312 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88545827374759008F4312 /* RunView.swift */; };
+		EE88545B2737E7AC008F4312 /* RestCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88545A2737E7AC008F4312 /* RestCountdown.swift */; };
+		EE88545D2737E7D7008F4312 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88545C2737E7D7008F4312 /* ProgressBar.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -217,6 +219,8 @@
 		EE88544C2736DA09008F4312 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		EE8854502736DA9D008F4312 /* StatsSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsSummaryView.swift; sourceTree = "<group>"; };
 		EE88545827374759008F4312 /* RunView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
+		EE88545A2737E7AC008F4312 /* RestCountdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestCountdown.swift; sourceTree = "<group>"; };
+		EE88545C2737E7D7008F4312 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -415,6 +419,8 @@
 				63817895273698FF004CA1F2 /* CircularCountdown.swift */,
 				632F875D2735D8CA008F2A5F /* ElapsedTimeView.swift */,
 				6381789C273699AC004CA1F2 /* WorkoutIntervalsView.swift */,
+				EE88545A2737E7AC008F4312 /* RestCountdown.swift */,
+				EE88545C2737E7D7008F4312 /* ProgressBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -921,6 +927,7 @@
 				6381789D273699AC004CA1F2 /* WorkoutIntervalsView.swift in Sources */,
 				EE88543E2736CA9E008F4312 /* Serie.swift in Sources */,
 				EE8854542736DE64008F4312 /* projectRunApp.swift in Sources */,
+				EE88545B2737E7AC008F4312 /* RestCountdown.swift in Sources */,
 				0AC4BB2927360CC800024D5F /* CountdownViewModel.swift in Sources */,
 				632F87602735DC9F008F2A5F /* WorkoutManager.swift in Sources */,
 				6381789B2736998C004CA1F2 /* WorkoutControlsView.swift in Sources */,
@@ -933,6 +940,7 @@
 				632F87372735C767008F2A5F /* NotificationView.swift in Sources */,
 				638178A227369EAF004CA1F2 /* WorkoutIntervalsViewModel.swift in Sources */,
 				EE8854362736C7DC008F4312 /* WorkoutListView.swift in Sources */,
+				EE88545D2737E7D7008F4312 /* ProgressBar.swift in Sources */,
 				638CDE2627369708001A267B /* WorkoutView.swift in Sources */,
 				6381789927369963004CA1F2 /* WorkoutOngoingView.swift in Sources */,
 				0AC4BB2B27360CE000024D5F /* Countdown.swift in Sources */,
