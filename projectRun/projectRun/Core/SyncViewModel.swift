@@ -9,13 +9,6 @@ import Foundation
 import WatchConnectivity
 
 class SyncViewModel : NSObject,  WCSessionDelegate, ObservableObject {
-    var session: WCSession
-
-    init(session: WCSession = .default){
-        self.session = session
-        session.activate()
-    }
-
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
 
     }
@@ -29,6 +22,13 @@ class SyncViewModel : NSObject,  WCSessionDelegate, ObservableObject {
     }
     
     #if os(iOS)
+    var session: WCSession
+
+    init(session: WCSession = .default){
+        self.session = session
+        session.activate()
+    }
+
     func sessionDidBecomeInactive(_ session: WCSession) {
 
     }
