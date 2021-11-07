@@ -8,22 +8,27 @@
 import SwiftUI
 
 struct RunView: View {
+  let timer = Timer.publish(every: 0.3, on: .main, in: .common).autoconnect()
+  @State var number: Int = 1
+
   var body: some View {
     NavigationView {
       VStack(alignment: .center) {
         StatsSummaryView()
           .padding()
           .roundCorners(radius: 20)
-
-//        Image(systemName: "figure.walk")
-//          .font(.system(size: 150))
-        TimelineView(.animation(minimumInterval: 0.05)){ _ in
-          Canvas { context, size in
-            var image = Image("figure-run-1")
-            image.scaledToFit()
-            context.draw(image, at: CGPoint(x: 0, y: 0))
+        Spacer()
+        Image("figure-run-\(number)")
+          .resizable()
+          .scaledToFit()
+          .frame(width: 350, height: 350, alignment: .center)
+          .onReceive(timer) { _ in
+            print(number)
+            if number >= 3 {
+              number = 0
+            }
+            number += 1
           }
-        }
         Spacer()
       }
       .padding(15)
