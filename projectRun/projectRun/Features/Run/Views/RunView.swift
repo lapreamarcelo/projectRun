@@ -23,7 +23,6 @@ struct RunView: View {
           .scaledToFit()
           .frame(width: 350, height: 350, alignment: .center)
           .onReceive(timer) { _ in
-            print(number)
             if number >= 3 {
               number = 0
             }
