@@ -10,18 +10,34 @@ import SwiftUI
 struct RunView: View {
   var body: some View {
     NavigationView {
-      Text("Run info goes here")
-        .toolbar {
-          ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
+      VStack(alignment: .center) {
+        StatsSummaryView()
+          .padding()
+          .roundCorners(radius: 20)
 
-            } label: {
-              Image(systemName: "person.circle")
-                .font(.title)
-            }
+//        Image(systemName: "figure.walk")
+//          .font(.system(size: 150))
+        TimelineView(.animation(minimumInterval: 0.05)){ _ in
+          Canvas { context, size in
+            var image = Image("figure-run-1")
+            image.scaledToFit()
+            context.draw(image, at: CGPoint(x: 0, y: 0))
           }
         }
-        .navigationTitle("Hi, Petizo")
+        Spacer()
+      }
+      .padding(15)
+      .navigationTitle("Hi, Petizo")
+      .toolbar {
+        ToolbarItem(placement: .navigationBarTrailing) {
+          Button {
+
+          } label: {
+            Image(systemName: "person.circle")
+              .font(.title)
+          }
+        }
+      }
     }
   }
 }

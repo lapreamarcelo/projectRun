@@ -11,7 +11,6 @@ struct ResultView: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 20) {
       StatsSummaryHeaderView()
-
       StatsSummaryView()
         .padding()
         .roundCorners(radius: 20)
