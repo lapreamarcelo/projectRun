@@ -16,7 +16,8 @@
 		0AC4BB2B27360CE000024D5F /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2327360CB000024D5F /* Countdown.swift */; };
 		0AC4BB2D273697CB00024D5F /* StartWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2C273697CB00024D5F /* StartWorkout.swift */; };
 		0AC4BB3027369A2200024D5F /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2F27369A2200024D5F /* WorkoutView.swift */; };
-		256CD50727361C1C00EA0E26 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutView.swift */; };
+		256CD50727361C1C00EA0E26 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutsView.swift */; };
+		25A5940D2737515300827595 /* WorkoutListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854382736C7F8008F4312 /* WorkoutListViewModel.swift */; };
 		25C06CEA2736A2FD00407C65 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CE92736A2FD00407C65 /* WidgetKit.framework */; };
 		25C06CEC2736A2FD00407C65 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CEB2736A2FD00407C65 /* SwiftUI.framework */; };
 		25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */; };
@@ -28,8 +29,12 @@
 		25C06D032736C8E700407C65 /* ResultsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D022736C8E700407C65 /* ResultsWidget.swift */; };
 		25C06D042736CB2100407C65 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		25C06D082736D0B800407C65 /* StartWorkoutWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D072736D0B800407C65 /* StartWorkoutWidget.swift */; };
-		25C06D092736D22F00407C65 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutView.swift */; };
 		25C06D0A2736D25000407C65 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D562735EBAE00C3308E /* RoundedCorners.swift */; };
+		25C06D0C2737497100407C65 /* WorkoutFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D0B2737497100407C65 /* WorkoutFormView.swift */; };
+		25C06D0F27374A4500407C65 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D0E27374A4500407C65 /* WorkoutCardView.swift */; };
+		25C06D1127374A8100407C65 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06D0E27374A4500407C65 /* WorkoutCardView.swift */; };
+		25DA93DE2737C90800BD6C12 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541627361A9B008F4312 /* Workout.swift */; };
+		25DA93DF2737C90E00BD6C12 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88541727361A9B008F4312 /* Serie.swift */; };
 		632F87262735C767008F2A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632F87252735C767008F2A5F /* Assets.xcassets */; };
 		632F872C2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		632F87352735C767008F2A5F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F87342735C767008F2A5F /* NotificationController.swift */; };
@@ -68,6 +73,7 @@
 		EE8854512736DA9D008F4312 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854502736DA9D008F4312 /* StatsSummaryView.swift */; };
 		EE8854532736DAF6008F4312 /* StatsSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854502736DA9D008F4312 /* StatsSummaryView.swift */; };
 		EE8854542736DE64008F4312 /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
+		EE88545927374759008F4312 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE88545827374759008F4312 /* RunView.swift */; };
 		EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1C273594DD00C3308E /* projectRunApp.swift */; };
 		EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1D1E273594DD00C3308E /* ContentView.swift */; };
 		EE8F1D21273594DF00C3308E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F1D20273594DF00C3308E /* Assets.xcassets */; };
@@ -161,7 +167,7 @@
 		0AC4BB2527360CB000024D5F /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		0AC4BB2C273697CB00024D5F /* StartWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkout.swift; sourceTree = "<group>"; };
 		0AC4BB2F27369A2200024D5F /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
-		256CD50627361C1C00EA0E26 /* WorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		256CD50627361C1C00EA0E26 /* WorkoutsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		25C06CE82736A2FD00407C65 /* projectRunWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = projectRunWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C06CE92736A2FD00407C65 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		25C06CEB2736A2FD00407C65 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -173,6 +179,8 @@
 		25C06CFF2736B5F200407C65 /* StatsSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSummaryHeaderView.swift; sourceTree = "<group>"; };
 		25C06D022736C8E700407C65 /* ResultsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsWidget.swift; sourceTree = "<group>"; };
 		25C06D072736D0B800407C65 /* StartWorkoutWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutWidget.swift; sourceTree = "<group>"; };
+		25C06D0B2737497100407C65 /* WorkoutFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFormView.swift; sourceTree = "<group>"; };
+		25C06D0E27374A4500407C65 /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
 		632F87232735C766008F2A5F /* projectRunWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRunWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632F87252735C767008F2A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632F872B2735C767008F2A5F /* projectRunWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "projectRunWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +216,7 @@
 		EE88544B2736DA09008F4312 /* ActivityHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHeader.swift; sourceTree = "<group>"; };
 		EE88544C2736DA09008F4312 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		EE8854502736DA9D008F4312 /* StatsSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsSummaryView.swift; sourceTree = "<group>"; };
+		EE88545827374759008F4312 /* RunView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
 		EE8F1D19273594DD00C3308E /* projectRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F1D1C273594DD00C3308E /* projectRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectRunApp.swift; sourceTree = "<group>"; };
 		EE8F1D1E273594DD00C3308E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -421,7 +430,9 @@
 		EE88540B27361966008F4312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				256CD50627361C1C00EA0E26 /* WorkoutView.swift */,
+				256CD50627361C1C00EA0E26 /* WorkoutsView.swift */,
+				25C06D0B2737497100407C65 /* WorkoutFormView.swift */,
+				25C06D0E27374A4500407C65 /* WorkoutCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -474,7 +485,6 @@
 		EE8854372736C7E5008F4312 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EE8854382736C7F8008F4312 /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -508,6 +518,22 @@
 			children = (
 				EE88544B2736DA09008F4312 /* ActivityHeader.swift */,
 				EE88544C2736DA09008F4312 /* ActivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE88545627374759008F4312 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				EE88545727374759008F4312 /* Views */,
+			);
+			path = Run;
+			sourceTree = "<group>";
+		};
+		EE88545727374759008F4312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE88545827374759008F4312 /* RunView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -591,6 +617,7 @@
 		EE8F1D4D2735954100C3308E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EE8854382736C7F8008F4312 /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -616,6 +643,7 @@
 		EE8F1D502735956000C3308E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EE88545627374759008F4312 /* Run */,
 				EE8854472736DA09008F4312 /* Home */,
 				EE88540F27361A64008F4312 /* Results */,
 				0AC4BB1F27360CB000024D5F /* CountDown */,
@@ -867,10 +895,12 @@
 			files = (
 				25C06D082736D0B800407C65 /* StartWorkoutWidget.swift in Sources */,
 				EE8854532736DAF6008F4312 /* StatsSummaryView.swift in Sources */,
-				25C06D092736D22F00407C65 /* WorkoutView.swift in Sources */,
+				25DA93DF2737C90E00BD6C12 /* Serie.swift in Sources */,
 				EE88544F2736DA77008F4312 /* StatsSummaryHeaderView.swift in Sources */,
+				25C06D1127374A8100407C65 /* WorkoutCardView.swift in Sources */,
 				25C06D032736C8E700407C65 /* ResultsWidget.swift in Sources */,
 				25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */,
+				25DA93DE2737C90800BD6C12 /* Workout.swift in Sources */,
 				25C06D042736CB2100407C65 /* (null) in Sources */,
 				25C06CFE2736ACF200407C65 /* LastRunWidget.swift in Sources */,
 				25C06D0A2736D25000407C65 /* RoundedCorners.swift in Sources */,
@@ -914,8 +944,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256CD50727361C1C00EA0E26 /* WorkoutView.swift in Sources */,
+				256CD50727361C1C00EA0E26 /* WorkoutsView.swift in Sources */,
 				EE8F1D572735EBAE00C3308E /* RoundedCorners.swift in Sources */,
+				25A5940D2737515300827595 /* WorkoutListViewModel.swift in Sources */,
 				EE88541B27361A9B008F4312 /* ChartView.swift in Sources */,
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
 				EE88541A27361A9B008F4312 /* Serie.swift in Sources */,
@@ -923,13 +954,16 @@
 				EE88541327361A64008F4312 /* ResultView.swift in Sources */,
 				EE8F1D1F273594DD00C3308E /* ContentView.swift in Sources */,
 				EE88541427361A64008F4312 /* ResultMapView.swift in Sources */,
+				25C06D0C2737497100407C65 /* WorkoutFormView.swift in Sources */,
 				0AC4BB2627360CB000024D5F /* CountdownViewModel.swift in Sources */,
 				EE88541927361A9B008F4312 /* Workout.swift in Sources */,
 				0AC4BB2827360CB000024D5F /* CountdownView.swift in Sources */,
 				EE8F1D1D273594DD00C3308E /* projectRunApp.swift in Sources */,
+				25C06D0F27374A4500407C65 /* WorkoutCardView.swift in Sources */,
 				EE88543C2736C8D7008F4312 /* WorkoutRepository.swift in Sources */,
 				EE88544D2736DA09008F4312 /* ActivityHeader.swift in Sources */,
 				EE8854512736DA9D008F4312 /* StatsSummaryView.swift in Sources */,
+				EE88545927374759008F4312 /* RunView.swift in Sources */,
 				EE8F1D29273594DF00C3308E /* projectRun.xcdatamodeld in Sources */,
 				0AC4BB2727360CB000024D5F /* Countdown.swift in Sources */,
 				25C06D002736B5F200407C65 /* StatsSummaryHeaderView.swift in Sources */,

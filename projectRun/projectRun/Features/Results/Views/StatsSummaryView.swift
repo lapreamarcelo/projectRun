@@ -40,9 +40,9 @@ struct StatsSummaryView: View {
             .foregroundColor(.primary)
         }
       }
-      .font(.caption)
       Spacer()
     }
+    .font(.body)
   }
 }
 

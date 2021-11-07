@@ -15,10 +15,19 @@ class WorkoutListViewModel: ObservableObject {
   private var cancellables = Set<AnyCancellable>()
 
   init() {
+    get()
+  }
+
+  func get() {
     repository.getAll()
       .sink { workouts in
         self.workouts = workouts
       }
       .store(in: &cancellables)
+  }
+
+  func add(_ workout: Workout) {
+    repository.add(workout)
+    get()
   }
 }
