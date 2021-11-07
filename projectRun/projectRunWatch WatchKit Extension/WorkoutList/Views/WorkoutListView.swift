@@ -13,7 +13,7 @@ struct WorkoutListView: View {
   var body: some View {
     NavigationView {
       List(viewModel.workouts) { workout in
-        NavigationLink(destination: WorkoutView()) {
+          NavigationLink(destination: StartWorkout(workout: workout)) {
           Text(workout.name)
             .font(.body)
             .foregroundColor(.primary)

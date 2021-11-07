@@ -358,6 +358,7 @@
 				632F87522735C9A6008F2A5F /* projectRunWatch WatchKit Extension.entitlements */,
 				6381789E27369DE3004CA1F2 /* WorkoutIntervals */,
 				638178972736994E004CA1F2 /* WorkoutOngoing */,
+				63E75EB827380C4D0062B732 /* StartWorkout */,
 				632F875B2735D60A008F2A5F /* MetricsView.swift */,
 				638CDE2527369708001A267B /* WorkoutView.swift */,
 				632F875F2735DC9F008F2A5F /* WorkoutManager.swift */,
@@ -369,9 +370,7 @@
 				632F873F2735C768008F2A5F /* Info.plist */,
 				632F87402735C768008F2A5F /* PushNotificationPayload.apns */,
 				632F873C2735C768008F2A5F /* Preview Content */,
-				0AC4BB2C273697CB00024D5F /* StartWorkout.swift */,
 				0AC4BB2F27369A2200024D5F /* WorkoutView.swift */,
-				0A3DBE7A2736A06C009D8EF7 /* StartWorkoutViewModel.swift */,
 			);
 			path = "projectRunWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -429,6 +428,31 @@
 			isa = PBXGroup;
 			children = (
 				638178A127369EAF004CA1F2 /* WorkoutIntervalsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63E75EB827380C4D0062B732 /* StartWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				63E75EBA27380C630062B732 /* ViewModel */,
+				63E75EB927380C5B0062B732 /* Views */,
+			);
+			path = StartWorkout;
+			sourceTree = "<group>";
+		};
+		63E75EB927380C5B0062B732 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AC4BB2C273697CB00024D5F /* StartWorkout.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63E75EBA27380C630062B732 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A3DBE7A2736A06C009D8EF7 /* StartWorkoutViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

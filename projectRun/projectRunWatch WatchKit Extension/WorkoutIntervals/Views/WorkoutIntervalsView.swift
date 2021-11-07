@@ -98,7 +98,7 @@ struct WorkoutIntervalsView: View {
 
 struct WorkoutIntervalsView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutIntervalsView(viewModel: WorkoutIntervalsViewModel(workoutManger: WorkoutManager()))
+        WorkoutIntervalsView(viewModel: WorkoutIntervalsViewModel(workoutManger: WorkoutManager(), workout: Workout(name: "", series: [])))
     }
 }
 

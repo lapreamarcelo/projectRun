@@ -10,6 +10,7 @@ import SwiftUI
 struct StartWorkout: View {
     @State var counting: Bool = false
     @StateObject var workoutManager = WorkoutManager()
+    var workout: Workout
 
     @ObservedObject var countdownViewModel = CountdownViewModel(seconds: 3)
 
@@ -32,7 +33,7 @@ struct StartWorkout: View {
             .background(.orange)
             .clipShape(Circle())
         } else if countdownViewModel.finished {
-            WorkoutOngoingView(workoutManager: workoutManager)
+            WorkoutOngoingView(workoutManager: workoutManager, workout: workout)
                 .animation(.default.delay(2), value: countdownViewModel.finished)
                 .transition(.opacity)
                 .onAppear {
@@ -47,6 +48,6 @@ struct StartWorkout: View {
 
 struct StartWorkout_Previews: PreviewProvider {
     static var previews: some View {
-        StartWorkout()
+        StartWorkout(workout: Workout(name: "", series: []))
     }
 }
