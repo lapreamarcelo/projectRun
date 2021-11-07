@@ -13,19 +13,20 @@ struct WorkoutCardView: View {
   var body: some View {
     VStack(alignment: .leading) {
       Text(workout.name)
-        .font(.system(size: 26, weight: .bold, design: .default))
+        .font(.title.bold())
         .foregroundColor(.white)
         .padding([.leading, .trailing])
 
       Text("\(workout.series.count) series")
-        .font(.system(size: 16, weight: .bold, design: .default))
-        .foregroundColor(.gray)
+        .font(.headline)
+        .fontWeight(.bold)
+        .foregroundColor(.black)
         .padding([.leading, .trailing])
+        .background(.regularMaterial)
     }
     .frame(width: 150, height: 150, alignment: .leading)
     .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
     .roundCorners(radius: 20)
-    .padding(.all, 10)
   }
 }
 
