@@ -22,9 +22,7 @@ class Countdown {
             .map { [weak self] _ in
                 guard let self = self else { return 0 }
 
-                if self.seconds > 0 {
-                    self.seconds -= 1
-                }
+                self.seconds -= 1
 
                 return self.seconds
         }.eraseToAnyPublisher()
