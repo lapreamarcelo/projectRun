@@ -17,6 +17,7 @@
 		0AC4BB2D273697CB00024D5F /* StartWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2C273697CB00024D5F /* StartWorkout.swift */; };
 		0AC4BB3027369A2200024D5F /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4BB2F27369A2200024D5F /* WorkoutView.swift */; };
 		256CD50727361C1C00EA0E26 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256CD50627361C1C00EA0E26 /* WorkoutsView.swift */; };
+		25A5940D2737515300827595 /* WorkoutListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8854382736C7F8008F4312 /* WorkoutListViewModel.swift */; };
 		25C06CEA2736A2FD00407C65 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CE92736A2FD00407C65 /* WidgetKit.framework */; };
 		25C06CEC2736A2FD00407C65 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C06CEB2736A2FD00407C65 /* SwiftUI.framework */; };
 		25C06CEF2736A2FD00407C65 /* projectRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C06CEE2736A2FD00407C65 /* projectRunWidget.swift */; };
@@ -480,7 +481,6 @@
 		EE8854372736C7E5008F4312 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EE8854382736C7F8008F4312 /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -597,6 +597,7 @@
 		EE8F1D4D2735954100C3308E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EE8854382736C7F8008F4312 /* WorkoutListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -922,6 +923,7 @@
 			files = (
 				256CD50727361C1C00EA0E26 /* WorkoutsView.swift in Sources */,
 				EE8F1D572735EBAE00C3308E /* RoundedCorners.swift in Sources */,
+				25A5940D2737515300827595 /* WorkoutListViewModel.swift in Sources */,
 				EE88541B27361A9B008F4312 /* ChartView.swift in Sources */,
 				EE8F1D26273594DF00C3308E /* Persistence.swift in Sources */,
 				EE88541A27361A9B008F4312 /* Serie.swift in Sources */,

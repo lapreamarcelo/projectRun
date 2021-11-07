@@ -21,4 +21,8 @@ class WorkoutListViewModel: ObservableObject {
       }
       .store(in: &cancellables)
   }
+
+  func add(_ workout: Workout) {
+    repository.add(workout)
+  }
 }

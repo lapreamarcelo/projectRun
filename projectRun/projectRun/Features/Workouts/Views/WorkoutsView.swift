@@ -9,25 +9,30 @@ import SwiftUI
 
 // MARK: - WorkoutView
 struct WorkoutsView: View {
-  @State private var showingSheet = false
+  @StateObject private var viewModel = WorkoutListViewModel()
+
+  let columns = [
+    GridItem(.flexible()),
+    GridItem(.flexible()),
+  ]
 
   var body: some View {
     NavigationView {
-      VStack {
-        WorkoutCardView()
+      ScrollView {
+        LazyVGrid(columns: columns) {
+          ForEach(viewModel.workouts) { workout in
+            WorkoutCardView()
+          }
+        }
+        Spacer()
       }
       .navigationBarTitle(Text("Workouts"))
       .toolbar {
         ToolbarItem {
-          Button {
-            showingSheet.toggle()
-          } label: {
+          NavigationLink(destination: WorkoutFormView(viewModel: self.viewModel)) {
             Label("Add Item", systemImage: "plus")
           }
         }
-      }
-      .sheet(isPresented: $showingSheet) {
-        WorkoutFormView()
       }
     }
   }

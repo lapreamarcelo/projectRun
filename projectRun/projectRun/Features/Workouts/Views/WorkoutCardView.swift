@@ -20,8 +20,9 @@ struct WorkoutCardView: View {
         .foregroundColor(.gray)
         .padding([.leading, .trailing])
     }
-    .frame(width: 175, height: 175, alignment: .leading)
-    .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
+    .frame(width: 150, height: 150, alignment: .leading)
+    .background(Color.green)
+//    .background(Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1)))
     .roundCorners(radius: 20)
     .padding(.all, 10)
   }
