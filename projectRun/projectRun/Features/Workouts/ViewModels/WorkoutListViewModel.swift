@@ -11,7 +11,7 @@ import MapKit
 
 class WorkoutListViewModel: ObservableObject {
   @Published var workouts = [Workout]()
-  private let repository = WorkoutRepository()
+  private let repository = WorkoutRepository.shared
   private var cancellables = Set<AnyCancellable>()
 
   init() {

@@ -8,29 +8,30 @@
 import Combine
 
 class WorkoutRepository {
-  private var workouts = [Workout]()
+    static let shared = WorkoutRepository()
+    private var workouts = [Workout]()
 
-  init() {
-    workouts.append(contentsOf: Workout.dummyWorkouts())
-  }
-
-  func getAll() -> AnyPublisher<[Workout], Never> {
-    Just(workouts)
-      .eraseToAnyPublisher()
-  }
-
-  func add(_ workout: Workout) {
-    workouts.append(workout)
-  }
-
-  func remove(_ workout: Workout) {
-    workouts.removeAll {
-      $0.id == workout.id
+    private init() {
+        workouts.append(contentsOf: Workout.dummyWorkouts())
     }
-  }
 
-  func update(_ workout: Workout) {
-    remove(workout)
-    add(workout)
-  }
+    func getAll() -> AnyPublisher<[Workout], Never> {
+        Just(workouts)
+            .eraseToAnyPublisher()
+    }
+
+    func add(_ workout: Workout) {
+        workouts.append(workout)
+    }
+
+    func remove(_ workout: Workout) {
+        workouts.removeAll {
+            $0.id == workout.id
+        }
+    }
+
+    func update(_ workout: Workout) {
+        remove(workout)
+        add(workout)
+    }
 }

@@ -14,6 +14,7 @@ struct projectRunApp: App {
           #if os(watchOS)
             WorkoutView()
                 .environmentObject(WorkoutListViewModel())
+                .environmentObject(SyncViewModel())
           #endif
 
           #if os(iOS)
@@ -34,6 +35,7 @@ struct projectRunApp: App {
                   Text("Activity")
                 }
             }
+            .environmentObject(SyncViewModel())
             .onAppear {
               UITabBar.appearance().backgroundColor = .white
             }
